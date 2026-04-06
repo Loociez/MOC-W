@@ -1,0 +1,253 @@
+/* ========================= */
+/* GLOBAL */
+/* ========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  background: linear-gradient(180deg, #2a004d 0%, #1a0033 50%, #120022 100%);
+  background-attachment: fixed;
+
+  color: gold;
+  overflow-x: hidden;
+}
+
+/* ========================= */
+/* PARTICLES */
+/* ========================= */
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* ========================= */
+/* LINK COLORS FIX */
+/* ========================= */
+a,
+a:visited,
+a:active {
+  color: gold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ========================= */
+/* SIDEBAR */
+/* ========================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+
+  background: rgba(20, 0, 40, 0.95);
+  border-right: 1px solid gold;
+
+  padding: 20px;
+}
+
+.sidebar h2 {
+  color: orange;
+  border-bottom: 1px solid gold;
+  padding-bottom: 6px;
+  margin-top: 0;
+}
+
+.sidebar a {
+  display: block;
+  padding: 8px;
+  margin: 6px 0;
+  border: 1px solid gold;
+  border-radius: 4px;
+  background: rgba(75, 0, 130, 0.4);
+}
+
+.sidebar a:hover {
+  box-shadow: 0 0 10px gold;
+}
+
+/* ========================= */
+/* MAIN CONTENT */
+/* ========================= */
+.main {
+  margin-left: 240px;
+  padding: 20px;
+}
+
+/* ========================= */
+/* HEADINGS */
+/* ========================= */
+h1 {
+  text-align: center;
+  color: gold;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+}
+
+h2 {
+  color: orange;
+  border-bottom: 1px solid gold;
+  padding-bottom: 6px;
+}
+
+/* ========================= */
+/* CONTENT BOX */
+/* ========================= */
+.content {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+
+  background: rgba(40, 0, 70, 0.7);
+  border: 1px solid gold;
+  border-radius: 8px;
+}
+
+/* ========================= */
+/* GRID MENU (FIXED SIZE) */
+/* ========================= */
+.container {
+  display: grid;
+
+  /* Force single row behavior */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+
+  gap: 12px;
+  max-width: 900px;
+  margin: 10px auto;
+}
+
+/* SMALLER BUTTONS */
+.card {
+  padding: 16px;
+  font-size: 0.95em;
+
+  text-align: center;
+  border: 1px solid gold;
+  border-radius: 6px;
+
+  background: rgba(75, 0, 130, 0.6);
+
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px gold;
+}
+
+/* ========================= */
+/* TABLES */
+/* ========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: rgba(30, 0, 60, 0.8);
+}
+
+th, td {
+  border: 1px solid gold;
+  padding: 8px;
+}
+
+th {
+  background: rgba(100, 0, 180, 0.8);
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+@media (max-width: 800px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* ========================= */
+/* CLASS GRID */
+/* ========================= */
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+/* CLASS CARD */
+.class-card {
+  text-align: center;
+  border: 1px solid gold;
+  border-radius: 8px;
+  padding: 10px;
+  background: rgba(75, 0, 130, 0.6);
+  transition: 0.2s;
+}
+
+.class-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px gold;
+}
+
+/* IMAGE */
+.class-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* CLASS NAME */
+.class-name {
+  font-weight: bold;
+  color: orange;
+}
+/* ========================= */
+/* INNER INFO BOX */
+/* ========================= */
+.info-box {
+  border: 1px solid gold;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+
+  background: rgba(20, 0, 40, 0.8);
+}
+
+.info-box h3 {
+  margin-top: 0;
+  color: orange;
+}
+
+/* ========================= */
+/* TABLE IMAGES */
+/* ========================= */
+table img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border: 1px solid gold;
+  border-radius: 4px;
+}
