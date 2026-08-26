@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Treasure Chests - Mirage Online Classic Wiki</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Supplemental styles for the chest tables — scoped so they layer
+       cleanly on top of the site's existing styles.css without fighting it. */
+    .chest-section {
+      margin: 2.5em 0;
+      padding-bottom: 1.5em;
+      border-bottom: 1px solid rgba(128,128,128,0.25);
+    }
+    .chest-section:last-child { border-bottom: none; }
+
+    .chest-section h2 {
+      margin-bottom: 0.2em;
+    }
+
+    .chest-section .difficulty-tag {
+      display: inline-block;
+      font-size: 0.75em;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.15em 0.6em;
+      border-radius: 3px;
+      margin-left: 0.5em;
+      vertical-align: middle;
+    }
+    .tag-normal    { background: #3a5f3a; color: #d7f5d7; }
+    .tag-nightmare { background: #5a3a7a; color: #ecd9ff; }
+    .tag-hell      { background: #7a2c2c; color: #ffd9d9; }
+    .tag-special   { background: #7a5c1e; color: #fff2cc; }
+
+    table.chest-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.75em;
+      font-size: 0.95em;
+    }
+    table.chest-table caption {
+      text-align: left;
+      font-weight: 600;
+      margin-bottom: 0.4em;
+    }
+    table.chest-table th, table.chest-table td {
+      text-align: left;
+      padding: 0.55em 0.75em;
+      border: 1px solid rgba(128,128,128,0.3);
+      vertical-align: top;
+    }
+    table.chest-table thead th {
+      background: rgba(128,128,128,0.12);
+      font-size: 0.85em;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    table.chest-table td.col-chest { width: 20%; font-weight: 600; }
+    table.chest-table td.col-pet   { width: 12%; }
+    table.chest-table td.col-items { width: 48%; }
+    table.chest-table td.col-xp    { width: 20%; }
+
+    .chest-note {
+      font-size: 0.85em;
+      opacity: 0.75;
+      font-style: italic;
+      margin-top: 0.4em;
+    }
+
+    .bonus-box {
+      margin: 1.5em 0 2.5em 0;
+      padding: 1em 1.2em;
+      border: 1px dashed rgba(128,128,128,0.4);
+      border-radius: 6px;
+      font-size: 0.92em;
+    }
+    .bonus-box h3 { margin-top: 0; }
+
+    .no-data {
+      opacity: 0.6;
+      font-style: italic;
+    }
+
+    .toc {
+      columns: 2;
+      column-gap: 2em;
+      margin: 1em 0 2em 0;
+      font-size: 0.95em;
+    }
+    .toc a { display: block; padding: 0.15em 0; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    @media (max-width: 700px) {
+      .toc { columns: 1; }
+      table.chest-table td.col-chest,
+      table.chest-table td.col-pet,
+      table.chest-table td.col-items,
+      table.chest-table td.col-xp { width: auto; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- SIDEBAR -->
+<!-- ========================= -->
+<div class="sidebar">
+  <h2>Quick Links</h2>
+
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="classes.html">Classes</a>
+  <a href="dungeons.html">Dungeons</a>
+  <a href="skills.html">Skills</a>
+  <a href="tips.html">Tips</a>
+  <a href="events.html">Events & Minigames</a>
+  <a href="Chests.html">Treasure Chests</a>
+  <a href="https://loociez.github.io/MOC-IV/itemslast.html">Item List</a>
+  <a href="https://loociez.github.io/MOC-IV/npclast.html">NPC List</a>
+  <a href="https://loociez.github.io/MOC-IV/crafting.html">Crafting Planner</a>
+  <a href="https://loociez.github.io/MOC-IV/Best.html">Build Helper</a>
+</div>
+
+<!-- ========================= -->
+<!-- MAIN CONTENT -->
+<!-- ========================= -->
+<div class="main">
+
+<h1>Treasure Chests</h1>
+
+<div class="content">
+  <h2>Chest Drops by Dungeon</h2>
+  <p>
+    Every treasure chest has a small chance (1 in 250) to also award a matching pet
+    when opened, in addition to its listed rewards. Every chest additionally rolls a
+    universal "bonus item" (crafting materials like Worm, Timber, Crappie, Rock, or Ore,
+    with an occasional rarer Beginner's tool) — see the note at the bottom of this page.
+  </p>
+</div>
+
+<div class="toc">
+  <a href="#down-the-well">Down in the Well</a>
+  <a href="#hidden-lair">Hidden Lair of the Kair Norax</a>
+  <a href="#garden">Garden of the Wanderer</a>
+  <a href="#graystone-brute">Graystone Brute</a>
+  <a href="#dragon-mouth">Dragon Mouth Cave</a>
+  <a href="#haunted-house">Into the Haunted House</a>
+  <a href="#graveyard">Alone in a Graveyard</a>
+  <a href="#sewers">Underworld of the Sewers</a>
+  <a href="#sand">Shoe Full of Sand</a>
+  <a href="#gandalfs">Gandalf's Magicbook</a>
+  <a href="#hoh">Hall of Heroes</a>
+  <a href="#cutthroat">Cutthroat's Stockade</a>
+  <a href="#low-tower">Tower of V'Drazzig (Low)</a>
+  <a href="#mid-tower">Tower of V'Drazzig (Middle)</a>
+  <a href="#tomb">Tomb of Trizarhn</a>
+  <a href="#crags">The Crags</a>
+  <a href="#alter">Alter of Kair-Norax</a>
+  <a href="#pits">Pit's Challenge</a>
+  <a href="#rift">Apocalyptic Rift</a>
+  <a href="#von">Von the Isolated</a>
+  <a href="#other">Other Chests</a>
+</div>
+
+<!-- DOWN IN THE WELL -->
+<div class="chest-section" id="down-the-well">
+  <h2>Down in the Well</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Difficulty</th><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="difficulty-tag tag-normal">Normal</span></td>
+        <td class="col-chest">Wellish Treasure</td>
+        <td class="col-pet">Squeak 🐶</td>
+        <td class="col-items">3 rolled from: Robe, Chainmail, Leather Jacket, Mystic Spoon, Iron Wakizashi, Iron Tipped Spear, Headband, Mail Coif, Jester's Cap, Book of Being, Buckler, Wooden Shield, Jeweled Pendant</td>
+        <td class="col-xp">Orb of Minor Experience</td>
+      </tr>
+      <tr>
+        <td><span class="difficulty-tag tag-nightmare">Nightmare</span></td>
+        <td class="col-chest">Unwell Treasure</td>
+        <td class="col-pet">Scorpio 🐶 or Brutus 🐶 (50/50)</td>
+        <td class="col-items">3 rolled from: Potion of Cavalier Health, Potion of Restored Vivacity</td>
+        <td class="col-xp">Novel of Minor Knowledge</td>
+      </tr>
+      <tr>
+        <td><span class="difficulty-tag tag-hell">Hell</span></td>
+        <td class="col-chest">Hell Well Treasure</td>
+        <td class="col-pet">Lesser Ice Demon 🐶</td>
+        <td class="col-items">Sealed Envelope (fixed)</td>
+        <td class="col-xp">Novel of Substantial Knowledge</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- HIDDEN LAIR -->
+<div class="chest-section" id="hidden-lair">
+  <h2>Hidden Lair of the Kair Norax</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-chest">Treasure of the Kair-Norax</td>
+        <td class="col-pet">Cluck 🐶</td>
+        <td class="col-items">3 rolled from: Magician's Blade, Shiv, Book of Resistance, Iron Rapier, Longbow, Roja Necklace</td>
+        <td class="col-xp">Orb of Substantial Experience</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- GARDEN OF THE WANDERER -->
+<div class="chest-section" id="garden">
+  <h2>Garden of the Wanderer</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Difficulty</th><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="difficulty-tag tag-normal">Normal</span></td>
+        <td class="col-chest">Garden Treasure</td>
+        <td class="col-pet">Eden 🐶</td>
+        <td class="col-items">3 rolled from: Wrap, Borrigarn's Platemail, Borrigarn's Flail, Winged Hood, Aventail, Kettle Helmet, Azul Necklace</td>
+        <td class="col-xp">Orb of Substantial Experience</td>
+      </tr>
+      <tr>
+        <td><span class="difficulty-tag tag-nightmare">Nightmare</span></td>
+        <td class="col-chest" colspan="4"><span class="no-data">No treasure chest data found for Nightmare Garden of the Wanderer — none of the chest cases match this dungeon. Update if a chest ID is confirmed.</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- GRAYSTONE BRUTE -->
+<div class="chest-section" id="graystone-brute">
+  <h2>Graystone Brute</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Difficulty</th><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="difficulty-tag tag-normal">Normal</span></td>
+        <td class="col-chest">Small Brute Bag</td>
+        <td class="col-pet">Chop 🐶</td>
+        <td class="col-items">No item roll — pet chance + bonus items only</td>
+        <td class="col-xp">Orb of Substantial Experience</td>
+      </tr>
+      <tr>
+        <td><span class="difficulty-tag tag-nightmare">Nightmare</span></td>
+        <td class="col-chest">Brute Bag</td>
+        <td class="col-pet">Flex 🐶</td>
+        <td class="col-items">No item roll — pet chance + bonus items only</td>
+        <td class="col-xp">Orb of Colossal Experience</td>
+      </tr>
+      <tr>
+        <td><span class="difficulty-tag tag-hell">Hell</span></td>
+        <td class="col-chest">Hell of a Treasure</td>
+        <td class="col-pet">Jack 🐶</td>
+        <td class="col-items">1 rolled from: Brutality, Undaunted Protector, Valorous Protector, Book of Life, Brute's Underwear, Broken Promise Ring, Lucifer's Plate — plus Brain of the Devil (fixed)</td>
+        <td class="col-xp">Novel of Colossal Knowledge</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- DRAGON MOUTH CAVE -->
+<div class="chest-section" id="dragon-mouth">
+  <h2>Dragon Mouth Cave</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Difficulty</th><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="difficulty-tag tag-normal">Normal</span></td>
+        <td class="col-chest">Dragon's Mouth Treasure</td>
+        <td class="col-pet">Scorch 🐶</td>
+        <td class="col-items">1 rolled from: Light's Edge, Needle, Enchanted Shield, Devil's Guard, Halcyon Heater</td>
+        <td class="col-xp">Orb of Experience</td>
+      </tr>
+      <tr>
+        <td><span class="difficulty-tag tag-nightmare">Nightmare</span></td>
+        <td class="col-chest">Defender's Treasure</td>
+        <td class="col-pet">Flounder 🐶</td>
+        <td class="col-items">1 rolled from: Sky Shroud, Tarragon Tunic, Guardian Plate, Living Skullcap, Midnight Basinet, Goggles, Vikso Helmet</td>
+        <td class="col-xp">Novel of Minor Knowledge</td>
+      </tr>
+      <tr>
+        <td><span class="difficulty-tag tag-hell">Hell</span></td>
+        <td class="col-chest">Consigliere's Bag</td>
+        <td class="col-pet">Spike 🐶</td>
+        <td class="col-items">1 rolled from: Crimson, Marksmens M95, Orb of Colossal Experience, Rose of Tears, Cursed Coronet, Lucky Horse's Head</td>
+        <td class="col-xp">Novel of Knowledge</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- HAUNTED HOUSE -->
+<div class="chest-section" id="haunted-house">
+  <h2>Into the Haunted House</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Difficulty</th><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="difficulty-tag tag-normal">Normal</span></td>
+        <td class="col-chest">Haunted Treasure</td>
+        <td class="col-pet">Spooky 🐶</td>
+        <td class="col-items">3 rolled from: Thimpson's Whiskey, Attila's Feast, Discolored Chrisom, Bronze Chest, Elven Garb, Candlestick, Nightshade, Sai, Shuriken, Seal of Warding, Ancient Deflector, Kite Shield, Solar Cap, Iron Helm, Wings of Zeus, Blood Ring</td>
+        <td class="col-xp">Orb of Colossal Experience</td>
+      </tr>
+      <tr>
+        <td><span class="difficulty-tag tag-nightmare">Nightmare</span></td>
+        <td class="col-chest" colspan="4"><span class="no-data">No treasure chest data found for Nightmare Haunted House — none of the chest cases match this dungeon.</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ALONE IN A GRAVEYARD -->
+<div class="chest-section" id="graveyard">
+  <h2>Alone in a Graveyard</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Difficulty</th><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="difficulty-tag tag-normal">Normal</span></td>
+        <td class="col-chest">Lonely Treasure</td>
+        <td class="col-pet">Bones 🐶</td>
+        <td class="col-items">Mister Bear (fixed)</td>
+        <td class="col-xp">Orb of Substantial Experience</td>
+      </tr>
+      <tr>
+        <td><span class="difficulty-tag tag-nightmare">Nightmare</span></td>
+        <td class="col-chest">Desolate Treasure</td>
+        <td class="col-pet">Fuzzy 🐶</td>
+        <td class="col-items">1 rolled from: Dekkar's Coin, Heavy Denim, Baggy Trousers</td>
+        <td class="col-xp">Orb of Colossal Experience</td>
+      </tr>
+      <tr>
+        <td><span class="difficulty-tag tag-hell">Hell</span></td>
+        <td class="col-chest">Grave Treasure</td>
+        <td class="col-pet">Dirt 🐶</td>
+        <td class="col-items">1 rolled from: Death's Mantle, Prosperity Quill, Mother's Silver Spoon, Matchbook</td>
+        <td class="col-xp">Novel of Substantial Knowledge</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SEWERS -->
+<div class="chest-section" id="sewers">
+  <h2>Underworld of the Sewers</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-chest">Filthy Sack</td>
+        <td class="col-pet">Stank 🐶</td>
+        <td class="col-items">Filth &times;100 (fixed)</td>
+        <td class="col-xp">Orb of Colossal Experience</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SHOE FULL OF SAND -->
+<div class="chest-section" id="sand">
+  <h2>Shoe Full of Sand</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-chest">Traveler's Pack</td>
+        <td class="col-pet">Callie 🐶</td>
+        <td class="col-items">Sand &times;250 (fixed)</td>
+        <td class="col-xp">Orb of Substantial Experience</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- GANDALF'S MAGICBOOK -->
+<div class="chest-section" id="gandalfs">
+  <h2>Gandalf's Magicbook</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-chest">Gandalf's Treasure</td>
+        <td class="col-pet">Zerp 🐶</td>
+        <td class="col-items">No item roll — pet chance + bonus items only</td>
+        <td class="col-xp">Novel of Knowledge</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- HALL OF HEROES -->
+<div class="chest-section" id="hoh">
+  <h2>Hall of Heroes</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-chest">Hero's Bag</td>
+        <td class="col-pet">Champ 🐶</td>
+        <td class="col-items">Hero's Wish &times;3 (fixed)</td>
+        <td class="col-xp">Donut of Finite Learning</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- CUTTHROAT'S STOCKADE -->
+<div class="chest-section" id="cutthroat">
+  <h2>Cutthroat's Stockade</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-chest">Small Lockbox</td>
+        <td class="col-pet">Cudi 🐶</td>
+        <td class="col-items" rowspan="3">1 rolled from: Lucifer's Plate, Rusted Scale, Agile Tunic, Mercury Garb, Cursed Gauntlet</td>
+        <td class="col-xp">Novel of Knowledge</td>
+      </tr>
+      <tr>
+        <td class="col-chest">Lockbox</td>
+        <td class="col-pet">Cudi 🐶</td>
+        <td class="col-xp">Novel of Knowledge</td>
+      </tr>
+      <tr>
+        <td class="col-chest">Large Lockbox</td>
+        <td class="col-pet">Cudi 🐶</td>
+        <td class="col-xp">Novel of Knowledge</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="chest-note">All three lockbox sizes roll from the same item pool — larger lockboxes likely differ in drop rate/quality rather than item variety.</p>
+</div>
+
+<!-- LOW TOWER -->
+<div class="chest-section" id="low-tower">
+  <h2>Tower of V'Drazzig (Low)</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-chest">Tower Treasure</td>
+        <td class="col-pet">Dino 🐶</td>
+        <td class="col-items">3 rolled from: Worn Vdrazzig's Shroud, Blood Tunic, Platemail, Viking Sword, Falcon Blade, Steel Bascinet, Beretta, Flimsy Helm of V'Drazzig, Valiant Protector, Flimsy Shield of V'Drazzig, Leather Moccasins</td>
+        <td class="col-xp">Novel of Substantial Knowledge</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- MID TOWER -->
+<div class="chest-section" id="mid-tower">
+  <h2>Tower of V'Drazzig (Middle)</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-chest">Treasure of V'Drazzig</td>
+        <td class="col-pet">Boom 🐶</td>
+        <td class="col-items">1 rolled from: Crusader's Helmet, Cursed Veil, Forest Shroud, Luchador Mask, Viking Warguard, Executioner's Helm, Cerebrum Preserver</td>
+        <td class="col-xp">Novel of Colossal Knowledge</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="chest-note">The Upper Tower of V'Drazzig chest is listed separately under Other Chests below, as it doesn't have a dedicated page in the current dungeon list.</p>
+</div>
+
+<!-- TOMB OF TRIZARHN -->
+<div class="chest-section" id="tomb">
+  <h2>Tomb of Trizarhn</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-chest">Trizarhn's Treasure</td>
+        <td class="col-pet">Lurch 🐶</td>
+        <td class="col-items">2 rolled from: Coin Purse, Staff of Wardos, Excalipur, Trizarhn's Recurve, Righteous Blade, Book of Elders, Shield Of Krogg, Crown Of Zueg, Heirloom Skullguard</td>
+        <td class="col-xp">Novel of Knowledge</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- THE CRAGS -->
+<div class="chest-section" id="crags">
+  <h2>The Crags</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Variant</th><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="difficulty-tag tag-normal">Old</span></td>
+        <td class="col-chest">Crags Treasure</td>
+        <td class="col-pet">Hopper 🐶</td>
+        <td class="col-items">3 rolled from: Deathshot, Power Chord, Forsaken, Widowmaker, Vorpal Wand, Bloodletter, Knight's Helm, Kepi of Survival, Vorpal Tunic, Nether Cloak, Lucifer's Plate — plus Head of Cottontail (fixed)</td>
+        <td class="col-xp">Novel of Knowledge</td>
+      </tr>
+      <tr>
+        <td><span class="difficulty-tag tag-nightmare">Old Nightmare</span></td>
+        <td class="col-chest">Vorpal Treasure</td>
+        <td class="col-pet">Bessie 🐶</td>
+        <td class="col-items">3 rolled from: Deathshot, Power Chord, Forsaken, Widowmaker, Vorpal Wand, Bloodletter, Lucifer's Plate, Void Rune, Knight's Helm, Kepi of Survival, Vorpal Tunic, Nether Cloak — plus Head of Cottontail (fixed)</td>
+        <td class="col-xp">Novel of Knowledge</td>
+      </tr>
+      <tr>
+        <td><span class="difficulty-tag tag-special">New Version</span></td>
+        <td class="col-chest">(unnamed treasure)</td>
+        <td class="col-pet">Cottontail 🐶</td>
+        <td class="col-items">1 rolled from: Grandma's Heirloom, Merlock's Buttons, Lucky Goblin Hands — plus Head of Cottontail (fixed)</td>
+        <td class="col-xp">Encyclopedia of Brilliance</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ALTER OF KAIR-NORAX -->
+<div class="chest-section" id="alter">
+  <h2>Alter of Kair-Norax</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Difficulty</th><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="difficulty-tag tag-normal">Normal</span></td>
+        <td class="col-chest">Alter Treasure</td>
+        <td class="col-pet">Quackers 🐶</td>
+        <td class="col-items">1 rolled from: Knochenbrenner, Lamellar Cuirass, Cartilage Necklet, Iron Gloves, Slingshot, Bugabow — plus Head of Kair Norax (fixed)</td>
+        <td class="col-xp">Novel of Minor Knowledge</td>
+      </tr>
+      <tr>
+        <td><span class="difficulty-tag tag-nightmare">Nightmare</span></td>
+        <td class="col-chest">Corrupted Treasure</td>
+        <td class="col-pet">Hobbes 🐶</td>
+        <td class="col-items">1 rolled from: Knochenbrenner, Void Rune, Lamellar Cuirass, Cartilage Necklet, Iron Gloves, Slingshot, Bugabow, Orb of Colossal Experience, Lucifer's Plate, Rusted Scale, Agile Tunic, Mercury Garb, Ztiweightski — plus Head of Kair Norax (fixed)</td>
+        <td class="col-xp">Novel of Substantial Knowledge</td>
+      </tr>
+      <tr>
+        <td><span class="difficulty-tag tag-hell">Hell</span></td>
+        <td class="col-chest" colspan="4"><span class="no-data">No treasure chest data found for Hell Alter of Kair-Norax — none of the chest cases match this dungeon.</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- PIT'S CHALLENGE -->
+<div class="chest-section" id="pits">
+  <h2>Pit's Challenge</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-chest">Babylonian Booty Bag</td>
+        <td class="col-pet">Pit 🐶</td>
+        <td class="col-items">Pitcoin &times;10 (fixed)</td>
+        <td class="col-xp">Donut of Finite Learning</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- APOCALYPTIC RIFT -->
+<div class="chest-section" id="rift">
+  <h2>Apocalyptic Rift</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-chest">Apocalyptic Treasure</td>
+        <td class="col-pet">Chewy 🐶</td>
+        <td class="col-items">1 rolled from: Rift Flower, Aladdin's Lamp</td>
+        <td class="col-xp">Novel of Substantial Knowledge</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- VON THE ISOLATED -->
+<div class="chest-section" id="von">
+  <h2>Von the Isolated</h2>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-chest">Von's Mission Chest</td>
+        <td class="col-pet">Von 🐶</td>
+        <td class="col-items">1 rolled from: Diamond Mission, Sapphire Mission, Ruby Mission, Emerald Mission, Amethyst Mission, Rock Mission</td>
+        <td class="col-xp">Novel of Minor Knowledge</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- OTHER CHESTS WITHOUT A DEDICATED DUNGEON PAGE -->
+<div class="chest-section" id="other">
+  <h2>Other Chests</h2>
+  <p class="chest-note">These chests appear in the drop tables but don't yet have a matching page in the current Dungeons list. Add a dungeon page and link it here once confirmed.</p>
+  <table class="chest-table">
+    <thead>
+      <tr><th>Dungeon / Source</th><th>Chest</th><th>Pet Reward</th><th>Possible Items</th><th>XP Reward</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Merlock's Maze</td>
+        <td class="col-chest">Merlock's Sack</td>
+        <td class="col-pet">Merlock 🐶</td>
+        <td class="col-items">1 rolled from: Orb of Minor / Substantial / Colossal Experience, Novel of Minor / Substantial / Colossal Knowledge, Grandma's Heirloom, Merlock's Buttons</td>
+        <td class="col-xp">Novel of Colossal Knowledge</td>
+      </tr>
+      <tr>
+        <td>Purification Trials</td>
+        <td class="col-chest">Purified Treasure</td>
+        <td class="col-pet">Fay 🐶</td>
+        <td class="col-items">No item roll — pet chance + bonus items only</td>
+        <td class="col-xp">Novel of Knowledge</td>
+      </tr>
+      <tr>
+        <td>Pyramid</td>
+        <td class="col-chest">Gift of the Pharaoh</td>
+        <td class="col-pet">King 🐶</td>
+        <td class="col-items">2 rolled from: Sweater of Madness, Madness Striders, Madness Kicks, Cap of Madness</td>
+        <td class="col-xp">Encyclopedia of Brilliance</td>
+      </tr>
+      <tr>
+        <td>Hell Norax</td>
+        <td class="col-chest">Kair's Treasure</td>
+        <td class="col-pet">Norax 🐶</td>
+        <td class="col-items">1 rolled from: Jade Sun Do-maru, Voidshiver Mantle, Hallowed Dust Robes, Autumnal Ghost Tunic, Savage Ember Harness, Bullet-Proof Vest, Miasma-Woven Tunic, Lyrical Wayfarer's Doublet, Drake-Slayer Breastplate, Fool's Gambit Vest, Crimson Noble Greatcoat</td>
+        <td class="col-xp">Encyclopedia of Brilliance</td>
+      </tr>
+      <tr>
+        <td>Emerald Pass (Normal)</td>
+        <td class="col-chest">Emerald Treasure</td>
+        <td class="col-pet">Tank 🐶</td>
+        <td class="col-items">1 rolled from: Cannon, Cord Cutter, Primal Howl, Black Belt, Paladins Spirit</td>
+        <td class="col-xp">Encyclopedia of Brilliance</td>
+      </tr>
+      <tr>
+        <td>Depths of V'Drazzig</td>
+        <td class="col-chest">Depth's Treasure</td>
+        <td class="col-pet">Rookie 🐶</td>
+        <td class="col-items">Goldmail of V'Drazzig (fixed)</td>
+        <td class="col-xp">Encyclopedia of Brilliance</td>
+      </tr>
+      <tr>
+        <td>Upper Tower of V'Drazzig</td>
+        <td class="col-chest">V'Drazzig's Overstuffed Pack</td>
+        <td class="col-pet">Hopper 🐶*</td>
+        <td class="col-items">Mindless Thought (fixed)</td>
+        <td class="col-xp">Avocado of Thoughtfulness</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="chest-note">*The Upper Tower chest reuses the same pet ID as the Old Crags chest in the source data — likely worth double-checking in-game before publishing as final.</p>
+</div>
+
+<!-- BONUS ITEMS -->
+<div class="bonus-box">
+  <h3>Universal Bonus Items</h3>
+  <p>Every chest opened rolls these on top of its listed rewards:</p>
+  <ul>
+    <li><strong>Bonus Slot 1 (always given):</strong> Worm, Timber, Crappie, Rock, or Ore</li>
+    <li><strong>Bonus Slot 2 (occasional):</strong> Beginner's Rod, Beginner's Skill Kit, or Beginner's Axe</li>
+    <li><strong>Bonus Slot 3 (occasional):</strong> Timber, Crappie, or Rock</li>
+  </ul>
+  <p>Every chest also carries a 1-in-250 chance (guaranteed for the player "Rich") to award its matching pet, announced server-wide when it happens.</p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
