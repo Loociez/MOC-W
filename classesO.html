@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Classes - Mirage Online Classic Wiki</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Small additions only — everything else reuses styles.css as-is */
+    .info-box table { margin-top: 10px; }
+    .info-box .stat-note {
+      font-size: 0.85em;
+      color: orange;
+      font-style: italic;
+      margin: 8px 0 0 0;
+    }
+    .quick-table td, .quick-table th {
+      text-align: center;
+    }
+    .quick-table td:first-child, .quick-table th:first-child {
+      text-align: left;
+    }
+    .hard-tag {
+      display: inline-block;
+      font-size: 0.75em;
+      font-weight: bold;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid gold;
+      background: rgba(150, 0, 0, 0.5);
+      margin-left: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- SIDEBAR -->
+<!-- ========================= -->
+<div class="sidebar">
+  <h2>Quick Links</h2>
+
+ <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="classes.html">Classes</a>
+  <a href="dungeons.html">Dungeons</a>
+  <a href="skills.html">Skills</a>
+  <a href="tips.html">Tips</a>
+  <a href="events.html">Events & Minigames</a>
+  <a href="https://loociez.github.io/MOC-IV/itemslast.html">Item List</a>
+  <a href="https://loociez.github.io/MOC-IV/npclast.html">NPC List</a>
+  <a href="https://loociez.github.io/MOC-IV/crafting.html">Crafting Planner</a>
+  <a href="https://loociez.github.io/MOC-IV/Best.html">Build Helper</a>
+</div>
+<!-- ========================= -->
+<!-- MAIN CONTENT -->
+<!-- ========================= -->
+<div class="main">
+
+<h1>Classes</h1>
+
+<!-- INTRO -->
+<div class="content">
+  <h2>Playable Classes</h2>
+  <p>
+    Mirage Online Classic currently has 11 playable classes. Each has its own base
+    Health / Mana / Stamina, combat stats, and its own rate of growth per level.
+    Base values below apply at level 1; growth values show how much a stat gains
+    each level, and how that growth changes once a class reaches its listed
+    level interval.
+  </p>
+</div>
+
+<!-- QUICK COMPARE TABLE -->
+<div class="info-box">
+  <h3>Quick Comparison (Base Stats, Level 1)</h3>
+  <table class="quick-table">
+    <thead>
+      <tr>
+        <th>Class</th><th>HP</th><th>MP</th><th>SP</th>
+        <th>ATK</th><th>DEF</th><th>RAT</th><th>RDF</th><th>MAT</th><th>MDF</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><a href="#samurai">Samurai</a></td><td>1125</td><td>0</td><td>150</td><td>300</td><td>25</td><td>0</td><td>25</td><td>0</td><td>25</td></tr>
+      <tr><td><a href="#warlock">Warlock</a></td><td>870</td><td>75</td><td>120</td><td>275</td><td>15</td><td>0</td><td>20</td><td>300</td><td>20</td></tr>
+      <tr><td><a href="#cleric">Cleric</a></td><td>735</td><td>100</td><td>120</td><td>250</td><td>25</td><td>220</td><td>25</td><td>220</td><td>25</td></tr>
+      <tr><td><a href="#assassin">Assassin</a></td><td>1000</td><td>30</td><td>120</td><td>355</td><td>25</td><td>65</td><td>25</td><td>0</td><td>30</td></tr>
+      <tr><td><a href="#barbarian">Barbarian</a></td><td>1100</td><td>0</td><td>120</td><td>355</td><td>0</td><td>95</td><td>-25</td><td>0</td><td>-25</td></tr>
+      <tr><td><a href="#marksman">Marksman</a></td><td>1030</td><td>0</td><td>150</td><td>100</td><td>25</td><td>285</td><td>30</td><td>0</td><td>30</td></tr>
+      <tr><td><a href="#necromancer">Necromancer</a></td><td>900</td><td>90</td><td>120</td><td>270</td><td>15</td><td>0</td><td>15</td><td>285</td><td>15</td></tr>
+      <tr><td><a href="#bard">Bard</a></td><td>980</td><td>60</td><td>120</td><td>245</td><td>15</td><td>0</td><td>15</td><td>230</td><td>15</td></tr>
+      <tr><td><a href="#dragoon">Dragoon</a></td><td>1100</td><td>30</td><td>120</td><td>300</td><td>30</td><td>0</td><td>35</td><td>0</td><td>35</td></tr>
+      <tr><td><a href="#jester">Jester</a></td><td>1140</td><td>0</td><td>175</td><td>210</td><td>50</td><td>0</td><td>50</td><td>0</td><td>50</td></tr>
+      <tr><td><a href="#vampire">Vampire</a></td><td>1070</td><td>0</td><td>175</td><td>400</td><td>20</td><td>20</td><td>20</td><td>0</td><td>-30</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- JUMP LINKS -->
+<div class="class-grid">
+  <a href="#samurai" class="class-card"><div class="class-name">Samurai</div></a>
+  <a href="#warlock" class="class-card"><div class="class-name">Warlock</div></a>
+  <a href="#cleric" class="class-card"><div class="class-name">Cleric</div></a>
+  <a href="#assassin" class="class-card"><div class="class-name">Assassin</div></a>
+  <a href="#barbarian" class="class-card"><div class="class-name">Barbarian</div></a>
+  <a href="#marksman" class="class-card"><div class="class-name">Marksman</div></a>
+  <a href="#necromancer" class="class-card"><div class="class-name">Necromancer</div></a>
+  <a href="#bard" class="class-card"><div class="class-name">Bard</div></a>
+  <a href="#dragoon" class="class-card"><div class="class-name">Dragoon</div></a>
+  <a href="#jester" class="class-card"><div class="class-name">Jester</div></a>
+  <a href="#vampire" class="class-card"><div class="class-name">Vampire</div></a>
+</div>
+
+<!-- SAMURAI -->
+<div class="info-box" id="samurai">
+  <h3>Samurai</h3>
+  <p>The Samurai is an effective warrior in battle with a swift counterattack.</p>
+  <table>
+    <thead><tr><th>Stat</th><th>Base (Lv.1)</th><th>Per-Level Growth</th><th>Growth Change After Interval</th><th>Regen Change After Interval</th><th>Interval Level</th></tr></thead>
+    <tbody>
+      <tr><td>HP</td><td>1125</td><td>+145</td><td>-45</td><td>-35</td><td>50</td></tr>
+      <tr><td>MP</td><td>0</td><td>+0</td><td>-45</td><td>-25</td><td>50</td></tr>
+      <tr><td>SP</td><td>150</td><td>+2</td><td>-45</td><td>-30</td><td>50</td></tr>
+      <tr><td>ATK</td><td>300</td><td>+3</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>DEF</td><td>25</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>RAT</td><td>0</td><td>+1</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>RDF</td><td>25</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>MAT</td><td>0</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>MDF</td><td>25</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Move Delay: 100 &nbsp;|&nbsp; Attack Delay: 100</p>
+</div>
+
+<!-- WARLOCK -->
+<div class="info-box" id="warlock">
+  <h3>Warlock</h3>
+  <p>Melee or Magic ranged class capable of casting an AOE upon interacting with a target or themselves.</p>
+  <table>
+    <thead><tr><th>Stat</th><th>Base (Lv.1)</th><th>Per-Level Growth</th><th>Growth Change After Interval</th><th>Regen Change After Interval</th><th>Interval Level</th></tr></thead>
+    <tbody>
+      <tr><td>HP</td><td>870</td><td>+145</td><td>-45</td><td>-25</td><td>50</td></tr>
+      <tr><td>MP</td><td>75</td><td>+1</td><td>0</td><td>0</td><td>50</td></tr>
+      <tr><td>SP</td><td>120</td><td>+2</td><td>-45</td><td>-30</td><td>50</td></tr>
+      <tr><td>ATK</td><td>275</td><td>+3</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>DEF</td><td>15</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>RAT</td><td>0</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>RDF</td><td>20</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>MAT</td><td>300</td><td>+2</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>MDF</td><td>20</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Move Delay: 100 &nbsp;|&nbsp; Attack Delay: 100</p>
+</div>
+
+<!-- CLERIC -->
+<div class="info-box" id="cleric">
+  <h3>Cleric</h3>
+  <p>The Cleric is a great team supporter, granting healing + revive.</p>
+  <table>
+    <thead><tr><th>Stat</th><th>Base (Lv.1)</th><th>Per-Level Growth</th><th>Growth Change After Interval</th><th>Regen Change After Interval</th><th>Interval Level</th></tr></thead>
+    <tbody>
+      <tr><td>HP</td><td>735</td><td>+146</td><td>-45</td><td>-25</td><td>50</td></tr>
+      <tr><td>MP</td><td>100</td><td>+1</td><td>-45</td><td>-20</td><td>50</td></tr>
+      <tr><td>SP</td><td>120</td><td>+1</td><td>-45</td><td>-30</td><td>50</td></tr>
+      <tr><td>ATK</td><td>250</td><td>+2</td><td>-50</td><td>—</td><td>70</td></tr>
+      <tr><td>DEF</td><td>25</td><td>+0</td><td>0</td><td>—</td><td>70</td></tr>
+      <tr><td>RAT</td><td>220</td><td>+2</td><td>-50</td><td>—</td><td>70</td></tr>
+      <tr><td>RDF</td><td>25</td><td>+0</td><td>0</td><td>—</td><td>70</td></tr>
+      <tr><td>MAT</td><td>220</td><td>+2</td><td>-50</td><td>—</td><td>70</td></tr>
+      <tr><td>MDF</td><td>25</td><td>+0</td><td>0</td><td>—</td><td>70</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Move Delay: 100 &nbsp;|&nbsp; Attack Delay: 100</p>
+</div>
+
+<!-- ASSASSIN -->
+<div class="info-box" id="assassin">
+  <h3>Assassin</h3>
+  <p>A cloaked melee fighter that slows opponents and applies a poison on a successful invisible strike.</p>
+  <table>
+    <thead><tr><th>Stat</th><th>Base (Lv.1)</th><th>Per-Level Growth</th><th>Growth Change After Interval</th><th>Regen Change After Interval</th><th>Interval Level</th></tr></thead>
+    <tbody>
+      <tr><td>HP</td><td>1000</td><td>+143</td><td>-45</td><td>-35</td><td>50</td></tr>
+      <tr><td>MP</td><td>30</td><td>+1</td><td>-45</td><td>-85</td><td>50</td></tr>
+      <tr><td>SP</td><td>120</td><td>+2</td><td>-45</td><td>-30</td><td>50</td></tr>
+      <tr><td>ATK</td><td>355</td><td>+3</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>DEF</td><td>25</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>RAT</td><td>65</td><td>+1</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>RDF</td><td>25</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>MAT</td><td>0</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>MDF</td><td>30</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Move Delay: 100 &nbsp;|&nbsp; Attack Delay: 100</p>
+</div>
+
+<!-- BARBARIAN -->
+<div class="info-box" id="barbarian">
+  <h3>Barbarian</h3>
+  <p>Standard but very strong melee fighter.</p>
+  <table>
+    <thead><tr><th>Stat</th><th>Base (Lv.1)</th><th>Per-Level Growth</th><th>Growth Change After Interval</th><th>Regen Change After Interval</th><th>Interval Level</th></tr></thead>
+    <tbody>
+      <tr><td>HP</td><td>1100</td><td>+150</td><td>-45</td><td>-35</td><td>50</td></tr>
+      <tr><td>MP</td><td>0</td><td>+0</td><td>-45</td><td>-25</td><td>50</td></tr>
+      <tr><td>SP</td><td>120</td><td>+2</td><td>-45</td><td>-30</td><td>50</td></tr>
+      <tr><td>ATK</td><td>355</td><td>+4</td><td>-25</td><td>—</td><td>60</td></tr>
+      <tr><td>DEF</td><td>0</td><td>+0</td><td>0</td><td>—</td><td>60</td></tr>
+      <tr><td>RAT</td><td>95</td><td>+2</td><td>0</td><td>—</td><td>60</td></tr>
+      <tr><td>RDF</td><td>-25</td><td>+0</td><td>0</td><td>—</td><td>60</td></tr>
+      <tr><td>MAT</td><td>0</td><td>+0</td><td>0</td><td>—</td><td>60</td></tr>
+      <tr><td>MDF</td><td>-25</td><td>+0</td><td>0</td><td>—</td><td>60</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Move Delay: 100 &nbsp;|&nbsp; Attack Delay: 100</p>
+</div>
+
+<!-- MARKSMAN -->
+<div class="info-box" id="marksman">
+  <h3>Marksman</h3>
+  <p>Ranged fighter with a shotgun AoE blast for devastating short-range attacks.</p>
+  <table>
+    <thead><tr><th>Stat</th><th>Base (Lv.1)</th><th>Per-Level Growth</th><th>Growth Change After Interval</th><th>Regen Change After Interval</th><th>Interval Level</th></tr></thead>
+    <tbody>
+      <tr><td>HP</td><td>1030</td><td>+139</td><td>-45</td><td>-35</td><td>50</td></tr>
+      <tr><td>MP</td><td>0</td><td>+0</td><td>-45</td><td>-35</td><td>50</td></tr>
+      <tr><td>SP</td><td>150</td><td>+3</td><td>-45</td><td>-25</td><td>50</td></tr>
+      <tr><td>ATK</td><td>100</td><td>+2</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>DEF</td><td>25</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>RAT</td><td>285</td><td>+3</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>RDF</td><td>30</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>MAT</td><td>0</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>MDF</td><td>30</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Move Delay: 100 &nbsp;|&nbsp; Attack Delay: 100</p>
+</div>
+
+<!-- NECROMANCER -->
+<div class="info-box" id="necromancer">
+  <h3>Necromancer</h3>
+  <p>Magic user summoning an undead companion to fight alongside them.</p>
+  <table>
+    <thead><tr><th>Stat</th><th>Base (Lv.1)</th><th>Per-Level Growth</th><th>Growth Change After Interval</th><th>Regen Change After Interval</th><th>Interval Level</th></tr></thead>
+    <tbody>
+      <tr><td>HP</td><td>900</td><td>+138</td><td>-45</td><td>-25</td><td>50</td></tr>
+      <tr><td>MP</td><td>90</td><td>+1</td><td>-45</td><td>0</td><td>50</td></tr>
+      <tr><td>SP</td><td>120</td><td>+2</td><td>-45</td><td>-30</td><td>50</td></tr>
+      <tr><td>ATK</td><td>270</td><td>+2</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>DEF</td><td>15</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>RAT</td><td>0</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>RDF</td><td>15</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>MAT</td><td>285</td><td>+1</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>MDF</td><td>15</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Move Delay: 100 &nbsp;|&nbsp; Attack Delay: 100</p>
+</div>
+
+<!-- BARD -->
+<div class="info-box" id="bard">
+  <h3>Bard</h3>
+  <p>The Bard is a group supporter, buffs all allies within range.</p>
+  <table>
+    <thead><tr><th>Stat</th><th>Base (Lv.1)</th><th>Per-Level Growth</th><th>Growth Change After Interval</th><th>Regen Change After Interval</th><th>Interval Level</th></tr></thead>
+    <tbody>
+      <tr><td>HP</td><td>980</td><td>+125</td><td>-60</td><td>-25</td><td>50</td></tr>
+      <tr><td>MP</td><td>60</td><td>+1</td><td>-60</td><td>-25</td><td>50</td></tr>
+      <tr><td>SP</td><td>120</td><td>+2</td><td>-60</td><td>-30</td><td>50</td></tr>
+      <tr><td>ATK</td><td>245</td><td>+3</td><td>-50</td><td>—</td><td>50</td></tr>
+      <tr><td>DEF</td><td>15</td><td>+0</td><td>0</td><td>—</td><td>50</td></tr>
+      <tr><td>RAT</td><td>0</td><td>+0</td><td>0</td><td>—</td><td>50</td></tr>
+      <tr><td>RDF</td><td>15</td><td>+0</td><td>0</td><td>—</td><td>50</td></tr>
+      <tr><td>MAT</td><td>230</td><td>+2</td><td>-50</td><td>—</td><td>50</td></tr>
+      <tr><td>MDF</td><td>15</td><td>+0</td><td>0</td><td>—</td><td>50</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Move Delay: 100 &nbsp;|&nbsp; Attack Delay: 100</p>
+</div>
+
+<!-- DRAGOON -->
+<div class="info-box" id="dragoon">
+  <h3>Dragoon</h3>
+  <p>The Dragoon is a strong offensive tank with a Jump spell that deals AoE upon landing.</p>
+  <table>
+    <thead><tr><th>Stat</th><th>Base (Lv.1)</th><th>Per-Level Growth</th><th>Growth Change After Interval</th><th>Regen Change After Interval</th><th>Interval Level</th></tr></thead>
+    <tbody>
+      <tr><td>HP</td><td>1100</td><td>+145</td><td>-45</td><td>-25</td><td>50</td></tr>
+      <tr><td>MP</td><td>30</td><td>+1</td><td>-45</td><td>-45</td><td>50</td></tr>
+      <tr><td>SP</td><td>120</td><td>+2</td><td>-45</td><td>-30</td><td>50</td></tr>
+      <tr><td>ATK</td><td>300</td><td>+3</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>DEF</td><td>30</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>RAT</td><td>0</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>RDF</td><td>35</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>MAT</td><td>0</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+      <tr><td>MDF</td><td>35</td><td>+0</td><td>0</td><td>—</td><td>0</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Move Delay: 100 &nbsp;|&nbsp; Attack Delay: 100</p>
+</div>
+
+<!-- JESTER -->
+<div class="info-box" id="jester">
+  <h3>Jester <span class="hard-tag">Hard Gameplay</span></h3>
+  <p>A straight up joker, meme support.</p>
+  <table>
+    <thead><tr><th>Stat</th><th>Base (Lv.1)</th><th>Per-Level Growth</th><th>Growth Change After Interval</th><th>Regen Change After Interval</th><th>Interval Level</th></tr></thead>
+    <tbody>
+      <tr><td>HP</td><td>1140</td><td>+129</td><td>-45</td><td>-35</td><td>50</td></tr>
+      <tr><td>MP</td><td>0</td><td>+0</td><td>-45</td><td>-35</td><td>50</td></tr>
+      <tr><td>SP</td><td>175</td><td>+2</td><td>-45</td><td>+15</td><td>50</td></tr>
+      <tr><td>ATK</td><td>210</td><td>+3</td><td>-66</td><td>—</td><td>50</td></tr>
+      <tr><td>DEF</td><td>50</td><td>+0</td><td>0</td><td>—</td><td>50</td></tr>
+      <tr><td>RAT</td><td>0</td><td>+1</td><td>0</td><td>—</td><td>50</td></tr>
+      <tr><td>RDF</td><td>50</td><td>+0</td><td>0</td><td>—</td><td>50</td></tr>
+      <tr><td>MAT</td><td>0</td><td>+1</td><td>0</td><td>—</td><td>50</td></tr>
+      <tr><td>MDF</td><td>50</td><td>+0</td><td>0</td><td>—</td><td>50</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Move Delay: 100 &nbsp;|&nbsp; Attack Delay: 100 &nbsp;|&nbsp; Note: SP regen change is positive (+15) after level 50, unlike every other class.</p>
+</div>
+
+<!-- VAMPIRE -->
+<div class="info-box" id="vampire">
+  <h3>Vampire <span class="hard-tag">Hard Gameplay</span></h3>
+  <p>The Vampire attacks swiftly with their teeth and hands, drains life from its opponents.</p>
+  <table>
+    <thead><tr><th>Stat</th><th>Base (Lv.1)</th><th>Per-Level Growth</th><th>Growth Change After Interval</th><th>Regen Change After Interval</th><th>Interval Level</th></tr></thead>
+    <tbody>
+      <tr><td>HP</td><td>1070</td><td>+122</td><td>-45</td><td>-90</td><td>50</td></tr>
+      <tr><td>MP</td><td>0</td><td>+0</td><td>-45</td><td>-90</td><td>50</td></tr>
+      <tr><td>SP</td><td>175</td><td>+1</td><td>-45</td><td>-50</td><td>50</td></tr>
+      <tr><td>ATK</td><td>400</td><td>+3</td><td>-33</td><td>—</td><td>50</td></tr>
+      <tr><td>DEF</td><td>20</td><td>+0</td><td>0</td><td>—</td><td>50</td></tr>
+      <tr><td>RAT</td><td>20</td><td>+1</td><td>0</td><td>—</td><td>50</td></tr>
+      <tr><td>RDF</td><td>20</td><td>+0</td><td>0</td><td>—</td><td>50</td></tr>
+      <tr><td>MAT</td><td>0</td><td>+0</td><td>0</td><td>—</td><td>50</td></tr>
+      <tr><td>MDF</td><td>-30</td><td>+0</td><td>0</td><td>—</td><td>50</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Move Delay: 100 &nbsp;|&nbsp; Attack Delay: 70 (faster than every other class)</p>
+</div>
+
+<!-- NOTES -->
+<div class="info-box">
+  <h3>Reading the Growth Columns</h3>
+  <p>
+    <strong>Per-Level Growth</strong> is how much a stat increases each level, starting from
+    the Base value at level 1. <strong>Growth Change After Interval</strong> is a modifier
+    applied to that per-level growth once the class passes its <strong>Interval Level</strong>
+    (for example, most classes see their HP/MP/SP growth drop once they pass level 50).
+    <strong>Regen Change After Interval</strong> works the same way but affects passive
+    HP/MP/SP regeneration rather than the stat gained on level-up. These are taken directly
+    from the game's class data — exact in-game behavior should be verified in testing before
+    treating this as authoritative for build planning.
+  </p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
