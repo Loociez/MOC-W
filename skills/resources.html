@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Resources - Mirage Online Classic Wiki</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Small additions only — everything else reuses styles.css as-is */
+    .info-box table { margin-top: 10px; }
+    .info-box .stat-note {
+      font-size: 0.85em;
+      color: orange;
+      font-style: italic;
+      margin: 8px 0 0 0;
+    }
+    .quick-table td, .quick-table th {
+      text-align: center;
+    }
+    .quick-table td:first-child, .quick-table th:first-child {
+      text-align: left;
+    }
+    .hard-tag {
+      display: inline-block;
+      font-size: 0.75em;
+      font-weight: bold;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid gold;
+      background: rgba(150, 0, 0, 0.5);
+      margin-left: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- SIDEBAR -->
+<!-- ========================= -->
+<div class="sidebar">
+  <h2>Quick Links</h2>
+
+ <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="classes.html">Classes</a>
+  <a href="dungeons.html">Dungeons</a>
+  <a href="skills.html">Skills</a>
+  <a href="tips.html">Tips</a>
+  <a href="events.html">Events & Minigames</a>
+  <a href="battles.html">Battle Maps</a>
+  <a href="resources.html">Resources</a>
+  <a href="https://loociez.github.io/MOC-IV/itemslast.html">Item List</a>
+  <a href="https://loociez.github.io/MOC-IV/npclast.html">NPC List</a>
+  <a href="https://loociez.github.io/MOC-IV/crafting.html">Crafting Planner</a>
+  <a href="https://loociez.github.io/MOC-IV/Best.html">Build Helper</a>
+</div>
+<!-- ========================= -->
+<!-- MAIN CONTENT -->
+<!-- ========================= -->
+<div class="main">
+
+<h1>Resources</h1>
+
+<!-- INTRO -->
+<div class="content">
+  <h2>Gathering Nodes</h2>
+  <p>
+    Mirage Online Classic currently has 12 active gathering resource types across Fishing,
+    Prospecting (Mining), and Lumberjacking (Woodcutting). Each node spawns a set number of
+    gatherable instances on its map, which replenish after a fixed delay once depleted. Gathering
+    from a node has a chance to award a guaranteed "drop" item and a separate chance to award a
+    bonus "gather" item on top of it.
+  </p>
+</div>
+
+<!-- QUICK COMPARE TABLE -->
+<div class="info-box">
+  <h3>Quick Comparison</h3>
+  <table class="quick-table">
+    <thead>
+      <tr>
+        <th>Node</th><th>Skill</th><th>Level Req.</th><th>Spawn Amount</th><th>Respawn Delay</th><th>EXP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><a href="#fishing-general">Fishing - General</a></td><td>Fishing</td><td>1</td><td>50</td><td>20s</td><td>500</td></tr>
+      <tr><td><a href="#fishing-darkcone-syndicate">Fishing - Darkcone Syndicate</a></td><td>Fishing</td><td>10</td><td>50</td><td>20s</td><td>1000</td></tr>
+      <tr><td><a href="#fishing-the-crags">Fishing - The Crags</a></td><td>Fishing</td><td>10</td><td>50</td><td>20s</td><td>1000</td></tr>
+      <tr><td><a href="#fishing-crendale">Fishing - Crendale</a></td><td>Fishing</td><td>1</td><td>50</td><td>20s</td><td>500</td></tr>
+      <tr><td><a href="#fishing-dragonia">Fishing - Dragonia</a></td><td>Fishing</td><td>1</td><td>50</td><td>20s</td><td>500</td></tr>
+      <tr><td><a href="#fishing-town-of-northcoast">Fishing - Town of Northcoast</a></td><td>Fishing</td><td>1</td><td>50</td><td>20s</td><td>500</td></tr>
+      <tr><td><a href="#fishing-draconis-wastes">Fishing - Draconis Wastes</a></td><td>Fishing</td><td>1</td><td>50</td><td>20s</td><td>500</td></tr>
+      <tr><td><a href="#prospecting-general">Prospecting - General</a></td><td>Prospecting (Mining)</td><td>1</td><td>50</td><td>20s</td><td>500</td></tr>
+      <tr><td><a href="#prospecting-crags">Prospecting - Crags</a></td><td>Prospecting (Mining)</td><td>10</td><td>50</td><td>20s</td><td>1000</td></tr>
+      <tr><td><a href="#lumber-general">Lumber - General</a></td><td>Lumberjacking (Woodcutting)</td><td>1</td><td>50</td><td>20s</td><td>500</td></tr>
+      <tr><td><a href="#lumber-darkcone-syndicate">Lumber - Darkcone Syndicate</a></td><td>Lumberjacking (Woodcutting)</td><td>10</td><td>50</td><td>20s</td><td>1000</td></tr>
+      <tr><td><a href="#lumber-the-crags">Lumber - The Crags</a></td><td>Lumberjacking (Woodcutting)</td><td>10</td><td>50</td><td>20s</td><td>1000</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- JUMP LINKS -->
+<div class="class-grid">
+  <a href="#fishing-general" class="class-card"><div class="class-name">Fishing - General</div></a>
+  <a href="#fishing-darkcone-syndicate" class="class-card"><div class="class-name">Fishing - Darkcone Syndicate</div></a>
+  <a href="#fishing-the-crags" class="class-card"><div class="class-name">Fishing - The Crags</div></a>
+  <a href="#fishing-crendale" class="class-card"><div class="class-name">Fishing - Crendale</div></a>
+  <a href="#fishing-dragonia" class="class-card"><div class="class-name">Fishing - Dragonia</div></a>
+  <a href="#fishing-town-of-northcoast" class="class-card"><div class="class-name">Fishing - Town of Northcoast</div></a>
+  <a href="#fishing-draconis-wastes" class="class-card"><div class="class-name">Fishing - Draconis Wastes</div></a>
+  <a href="#prospecting-general" class="class-card"><div class="class-name">Prospecting - General</div></a>
+  <a href="#prospecting-crags" class="class-card"><div class="class-name">Prospecting - Crags</div></a>
+  <a href="#lumber-general" class="class-card"><div class="class-name">Lumber - General</div></a>
+  <a href="#lumber-darkcone-syndicate" class="class-card"><div class="class-name">Lumber - Darkcone Syndicate</div></a>
+  <a href="#lumber-the-crags" class="class-card"><div class="class-name">Lumber - The Crags</div></a>
+</div>
+
+<!-- FISHING - GENERAL -->
+<div class="info-box" id="fishing-general">
+  <h3>Fishing - General</h3>
+  <p>Skill: Fishing &nbsp;|&nbsp; Level Required: 1 &nbsp;|&nbsp; Success Chance per Attempt: 0.5%</p>
+  <table>
+    <thead><tr><th>Drop Item</th><th>Amount</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Lustrous Dust</td><td>1</td><td>5%</td></tr>
+        <tr><td>Crappie</td><td>1</td><td>50%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>Bonus Gather Item</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Beginner's Rod</td><td>0%</td></tr>
+        <tr><td>Crappie-o-matic 2500</td><td>4%</td></tr>
+        <tr><td>Angler's Reel</td><td>6%</td></tr>
+        <tr><td>Fishing Pole</td><td>2%</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Node Spawn Amount: 50 &nbsp;|&nbsp; Respawn/Replenish Delay: 20s &nbsp;|&nbsp; EXP per Gather: 500 &nbsp;|&nbsp; Max Drop Roll Chance: 75%</p>
+</div>
+
+<!-- FISHING - DARKCONE SYNDICATE -->
+<div class="info-box" id="fishing-darkcone-syndicate">
+  <h3>Fishing - Darkcone Syndicate</h3>
+  <p>Skill: Fishing &nbsp;|&nbsp; Level Required: 10 &nbsp;|&nbsp; Success Chance per Attempt: 0.25%</p>
+  <table>
+    <thead><tr><th>Drop Item</th><th>Amount</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Clownfish</td><td>1</td><td>5%</td></tr>
+        <tr><td>Crappie</td><td>1</td><td>50%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>Bonus Gather Item</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Beginner's Rod</td><td>0%</td></tr>
+        <tr><td>Crappie-o-matic 2500</td><td>4%</td></tr>
+        <tr><td>Angler's Reel</td><td>6%</td></tr>
+        <tr><td>Fishing Pole</td><td>2%</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Node Spawn Amount: 50 &nbsp;|&nbsp; Respawn/Replenish Delay: 20s &nbsp;|&nbsp; EXP per Gather: 1000 &nbsp;|&nbsp; Max Drop Roll Chance: 75%</p>
+</div>
+
+<!-- FISHING - THE CRAGS -->
+<div class="info-box" id="fishing-the-crags">
+  <h3>Fishing - The Crags</h3>
+  <p>Skill: Fishing &nbsp;|&nbsp; Level Required: 10 &nbsp;|&nbsp; Success Chance per Attempt: 0.25%</p>
+  <table>
+    <thead><tr><th>Drop Item</th><th>Amount</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Cragscale Bonefish</td><td>1</td><td>5%</td></tr>
+        <tr><td>Crappie</td><td>1</td><td>50%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>Bonus Gather Item</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Beginner's Rod</td><td>0%</td></tr>
+        <tr><td>Crappie-o-matic 2500</td><td>4%</td></tr>
+        <tr><td>Angler's Reel</td><td>6%</td></tr>
+        <tr><td>Fishing Pole</td><td>2%</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Node Spawn Amount: 50 &nbsp;|&nbsp; Respawn/Replenish Delay: 20s &nbsp;|&nbsp; EXP per Gather: 1000 &nbsp;|&nbsp; Max Drop Roll Chance: 75%</p>
+</div>
+
+<!-- FISHING - CRENDALE -->
+<div class="info-box" id="fishing-crendale">
+  <h3>Fishing - Crendale</h3>
+  <p>Skill: Fishing &nbsp;|&nbsp; Level Required: 1 &nbsp;|&nbsp; Success Chance per Attempt: 0.5%</p>
+  <table>
+    <thead><tr><th>Drop Item</th><th>Amount</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Crappie</td><td>1</td><td>50%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>Bonus Gather Item</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Beginner's Rod</td><td>0%</td></tr>
+        <tr><td>Crappie-o-matic 2500</td><td>4%</td></tr>
+        <tr><td>Angler's Reel</td><td>6%</td></tr>
+        <tr><td>Fishing Pole</td><td>2%</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Node Spawn Amount: 50 &nbsp;|&nbsp; Respawn/Replenish Delay: 20s &nbsp;|&nbsp; EXP per Gather: 500 &nbsp;|&nbsp; Max Drop Roll Chance: 75%</p>
+</div>
+
+<!-- FISHING - DRAGONIA -->
+<div class="info-box" id="fishing-dragonia">
+  <h3>Fishing - Dragonia</h3>
+  <p>Skill: Fishing &nbsp;|&nbsp; Level Required: 1 &nbsp;|&nbsp; Success Chance per Attempt: 0.5%</p>
+  <table>
+    <thead><tr><th>Drop Item</th><th>Amount</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Lustrous Dust</td><td>1</td><td>5%</td></tr>
+        <tr><td>Crappie</td><td>1</td><td>50%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>Bonus Gather Item</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Beginner's Rod</td><td>0%</td></tr>
+        <tr><td>Crappie-o-matic 2500</td><td>4%</td></tr>
+        <tr><td>Angler's Reel</td><td>6%</td></tr>
+        <tr><td>Fishing Pole</td><td>2%</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Node Spawn Amount: 50 &nbsp;|&nbsp; Respawn/Replenish Delay: 20s &nbsp;|&nbsp; EXP per Gather: 500 &nbsp;|&nbsp; Max Drop Roll Chance: 75%</p>
+</div>
+
+<!-- FISHING - TOWN OF NORTHCOAST -->
+<div class="info-box" id="fishing-town-of-northcoast">
+  <h3>Fishing - Town of Northcoast</h3>
+  <p>Skill: Fishing &nbsp;|&nbsp; Level Required: 1 &nbsp;|&nbsp; Success Chance per Attempt: 0.5%</p>
+  <table>
+    <thead><tr><th>Drop Item</th><th>Amount</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Lustrous Dust</td><td>1</td><td>5%</td></tr>
+        <tr><td>Crappie</td><td>1</td><td>50%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>Bonus Gather Item</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Beginner's Rod</td><td>0%</td></tr>
+        <tr><td>Crappie-o-matic 2500</td><td>4%</td></tr>
+        <tr><td>Angler's Reel</td><td>6%</td></tr>
+        <tr><td>Fishing Pole</td><td>2%</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Node Spawn Amount: 50 &nbsp;|&nbsp; Respawn/Replenish Delay: 20s &nbsp;|&nbsp; EXP per Gather: 500 &nbsp;|&nbsp; Max Drop Roll Chance: 75%</p>
+</div>
+
+<!-- FISHING - DRACONIS WASTES -->
+<div class="info-box" id="fishing-draconis-wastes">
+  <h3>Fishing - Draconis Wastes</h3>
+  <p>Skill: Fishing &nbsp;|&nbsp; Level Required: 1 &nbsp;|&nbsp; Success Chance per Attempt: 0.5%</p>
+  <table>
+    <thead><tr><th>Drop Item</th><th>Amount</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Lustrous Dust</td><td>1</td><td>5%</td></tr>
+        <tr><td>Crappie</td><td>1</td><td>50%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>Bonus Gather Item</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Beginner's Rod</td><td>0%</td></tr>
+        <tr><td>Crappie-o-matic 2500</td><td>4%</td></tr>
+        <tr><td>Angler's Reel</td><td>6%</td></tr>
+        <tr><td>Fishing Pole</td><td>2%</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Node Spawn Amount: 50 &nbsp;|&nbsp; Respawn/Replenish Delay: 20s &nbsp;|&nbsp; EXP per Gather: 500 &nbsp;|&nbsp; Max Drop Roll Chance: 75%</p>
+</div>
+
+<!-- PROSPECTING - GENERAL -->
+<div class="info-box" id="prospecting-general">
+  <h3>Prospecting - General</h3>
+  <p>Skill: Prospecting (Mining) &nbsp;|&nbsp; Level Required: 1 &nbsp;|&nbsp; Success Chance per Attempt: 0.5%</p>
+  <table>
+    <thead><tr><th>Drop Item</th><th>Amount</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Rock</td><td>1</td><td>25%</td></tr>
+        <tr><td>Rock</td><td>2</td><td>20%</td></tr>
+        <tr><td>Rock</td><td>3</td><td>10%</td></tr>
+        <tr><td>Ore</td><td>1</td><td>25%</td></tr>
+        <tr><td>Ore</td><td>2</td><td>20%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>Bonus Gather Item</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Beginner's Pick</td><td>0%</td></tr>
+        <tr><td>Mattock</td><td>2%</td></tr>
+        <tr><td>Rock Smasher</td><td>4%</td></tr>
+        <tr><td>Miner's Pick</td><td>6%</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Node Spawn Amount: 50 &nbsp;|&nbsp; Respawn/Replenish Delay: 20s &nbsp;|&nbsp; EXP per Gather: 500 &nbsp;|&nbsp; Max Drop Roll Chance: 75%</p>
+</div>
+
+<!-- PROSPECTING - CRAGS -->
+<div class="info-box" id="prospecting-crags">
+  <h3>Prospecting - Crags</h3>
+  <p>Skill: Prospecting (Mining) &nbsp;|&nbsp; Level Required: 10 &nbsp;|&nbsp; Success Chance per Attempt: 0.25%</p>
+  <table>
+    <thead><tr><th>Drop Item</th><th>Amount</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Rock</td><td>1</td><td>50%</td></tr>
+        <tr><td>Rock</td><td>2</td><td>25%</td></tr>
+        <tr><td>Rock</td><td>3</td><td>10%</td></tr>
+        <tr><td>Ore</td><td>1</td><td>50%</td></tr>
+        <tr><td>Cragstone</td><td>1</td><td>25%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>Bonus Gather Item</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Beginner's Pick</td><td>0%</td></tr>
+        <tr><td>Mattock</td><td>2%</td></tr>
+        <tr><td>Rock Smasher</td><td>4%</td></tr>
+        <tr><td>Miner's Pick</td><td>6%</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Node Spawn Amount: 50 &nbsp;|&nbsp; Respawn/Replenish Delay: 20s &nbsp;|&nbsp; EXP per Gather: 1000 &nbsp;|&nbsp; Max Drop Roll Chance: 75%</p>
+</div>
+
+<!-- LUMBER - GENERAL -->
+<div class="info-box" id="lumber-general">
+  <h3>Lumber - General</h3>
+  <p>Skill: Lumberjacking (Woodcutting) &nbsp;|&nbsp; Level Required: 1 &nbsp;|&nbsp; Success Chance per Attempt: 0.5%</p>
+  <table>
+    <thead><tr><th>Drop Item</th><th>Amount</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Timber</td><td>1</td><td>50%</td></tr>
+        <tr><td>Timber</td><td>2</td><td>25%</td></tr>
+        <tr><td>Timber</td><td>3</td><td>10%</td></tr>
+        <tr><td>Timber</td><td>4</td><td>5%</td></tr>
+        <tr><td>Nut</td><td>1</td><td>10%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>Bonus Gather Item</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Learning Hatchet</td><td>0%</td></tr>
+        <tr><td>Beginner's Axe</td><td>0%</td></tr>
+        <tr><td>Hatchet</td><td>2%</td></tr>
+        <tr><td>Specialized Edge</td><td>4%</td></tr>
+        <tr><td>Double-Bitted Axe</td><td>6%</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Node Spawn Amount: 50 &nbsp;|&nbsp; Respawn/Replenish Delay: 20s &nbsp;|&nbsp; EXP per Gather: 500 &nbsp;|&nbsp; Max Drop Roll Chance: 75%</p>
+</div>
+
+<!-- LUMBER - DARKCONE SYNDICATE -->
+<div class="info-box" id="lumber-darkcone-syndicate">
+  <h3>Lumber - Darkcone Syndicate</h3>
+  <p>Skill: Lumberjacking (Woodcutting) &nbsp;|&nbsp; Level Required: 10 &nbsp;|&nbsp; Success Chance per Attempt: 0.25%</p>
+  <table>
+    <thead><tr><th>Drop Item</th><th>Amount</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Timber</td><td>1</td><td>50%</td></tr>
+        <tr><td>Timber</td><td>2</td><td>25%</td></tr>
+        <tr><td>Timber</td><td>3</td><td>10%</td></tr>
+        <tr><td>Timber</td><td>4</td><td>5%</td></tr>
+        <tr><td>Cedar</td><td>1</td><td>10%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>Bonus Gather Item</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Learning Hatchet</td><td>0%</td></tr>
+        <tr><td>Beginner's Axe</td><td>0%</td></tr>
+        <tr><td>Hatchet</td><td>2%</td></tr>
+        <tr><td>Specialized Edge</td><td>4%</td></tr>
+        <tr><td>Double-Bitted Axe</td><td>6%</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Node Spawn Amount: 50 &nbsp;|&nbsp; Respawn/Replenish Delay: 20s &nbsp;|&nbsp; EXP per Gather: 1000 &nbsp;|&nbsp; Max Drop Roll Chance: 75%</p>
+</div>
+
+<!-- LUMBER - THE CRAGS -->
+<div class="info-box" id="lumber-the-crags">
+  <h3>Lumber - The Crags</h3>
+  <p>Skill: Lumberjacking (Woodcutting) &nbsp;|&nbsp; Level Required: 10 &nbsp;|&nbsp; Success Chance per Attempt: 0.25%</p>
+  <table>
+    <thead><tr><th>Drop Item</th><th>Amount</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Timber</td><td>1</td><td>50%</td></tr>
+        <tr><td>Timber</td><td>2</td><td>25%</td></tr>
+        <tr><td>Timber</td><td>3</td><td>10%</td></tr>
+        <tr><td>Timber</td><td>4</td><td>5%</td></tr>
+        <tr><td>Cragspine Timber</td><td>1</td><td>10%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>Bonus Gather Item</th><th>Chance</th></tr></thead>
+    <tbody>
+        <tr><td>Learning Hatchet</td><td>0%</td></tr>
+        <tr><td>Beginner's Axe</td><td>0%</td></tr>
+        <tr><td>Hatchet</td><td>2%</td></tr>
+        <tr><td>Specialized Edge</td><td>4%</td></tr>
+        <tr><td>Double-Bitted Axe</td><td>6%</td></tr>
+    </tbody>
+  </table>
+  <p class="stat-note">Node Spawn Amount: 50 &nbsp;|&nbsp; Respawn/Replenish Delay: 20s &nbsp;|&nbsp; EXP per Gather: 1000 &nbsp;|&nbsp; Max Drop Roll Chance: 75%</p>
+</div>
+
+<!-- NOTES -->
+<div class="info-box">
+  <h3>Reading the Resource Data</h3>
+  <p>
+    <strong>Spawn Amount</strong> is how many gatherable instances exist on a node's map at once.
+    <strong>Respawn/Replenish Delay</strong> is how long, in seconds, a depleted instance takes to
+    become gatherable again. <strong>Drop Item</strong> rows are the primary items you can receive
+    for a successful gather, each with its own chance and amount. <strong>Bonus Gather Item</strong>
+    rows are secondary items that can additionally be awarded on top of a drop. These are taken
+    directly from the game's resource data; exact in-game behavior should be verified in testing
+    before treating this as authoritative.
+  </p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
