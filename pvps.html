@@ -150,10 +150,11 @@ footer{margin-top:70px;padding-top:20px;border-top:1px solid var(--line);color:v
     <li><a href="#m2">2. Class archetypes</a></li>
     <li><a href="#m3">3. Movement toolkit</a></li>
     <li><a href="#m4">4. Combat strategy</a></li>
-    <li><a href="#m5">5. The mental game</a></li>
-    <li><a href="#m6">6. Mistakes and fixes</a></li>
-    <li><a href="#m7">7. Matchups and fight routine</a></li>
-    <li><a href="#m8">8. Long-term improvement</a></li>
+    <li><a href="#m5">5. Resource management</a></li>
+    <li><a href="#m6">6. The mental game</a></li>
+    <li><a href="#m7">7. Mistakes and fixes</a></li>
+    <li><a href="#m8">8. Matchups and fight routine</a></li>
+    <li><a href="#m9">9. Long-term improvement</a></li>
   </ol>
   <div class="group">Movement techniques</div>
   <ul>
@@ -162,6 +163,13 @@ footer{margin-top:70px;padding-top:20px;border-top:1px solid var(--line);color:v
     <li><a href="#z-moving">Z Moving</a></li>
     <li><a href="#reverse-z">Reverse Z Moving</a></li>
     <li><a href="#phasing">Phasing</a></li>
+  </ul>
+  <div class="group">Resources</div>
+  <ul>
+    <li><a href="#pools">HP, SP and MP</a></li>
+    <li><a href="#potions">Potion cooldowns</a></li>
+    <li><a href="#open-pk">Open PK</a></li>
+    <li><a href="#arena">Arena</a></li>
   </ul>
   <div class="group">Reference</div>
   <ul>
@@ -185,10 +193,11 @@ footer{margin-top:70px;padding-top:20px;border-top:1px solid var(--line);color:v
         <li><a href="#m2"><span class="t">2. Class archetypes</span><span class="d">Melee, ranged, zone control and hybrid roles.</span></a></li>
         <li><a href="#m3"><span class="t">3. Movement toolkit</span><span class="d">2-Tile Rule, 3-Tile, Z, Reverse Z, phasing.</span></a></li>
         <li><a href="#m4"><span class="t">4. Combat strategy</span><span class="d">Threat range, space, prediction, tempo, punishment.</span></a></li>
-        <li><a href="#m5"><span class="t">5. The mental game</span><span class="d">Staying calm and making opponents panic.</span></a></li>
-        <li><a href="#m6"><span class="t">6. Mistakes and fixes</span><span class="d">Why fights are lost and how to correct it.</span></a></li>
-        <li><a href="#m7"><span class="t">7. Matchups and routine</span><span class="d">Matchup thinking and a before, during, after checklist.</span></a></li>
-        <li><a href="#m8"><span class="t">8. Long-term improvement</span><span class="d">A practice plan by skill level.</span></a></li>
+        <li><a href="#m5"><span class="t">5. Resource management</span><span class="d">Micro and macro control of HP, SP and MP, potions, open PK vs arena.</span></a></li>
+        <li><a href="#m6"><span class="t">6. The mental game</span><span class="d">Staying calm and making opponents panic.</span></a></li>
+        <li><a href="#m7"><span class="t">7. Mistakes and fixes</span><span class="d">Why fights are lost and how to correct it.</span></a></li>
+        <li><a href="#m8"><span class="t">8. Matchups and routine</span><span class="d">Matchup thinking and a before, during, after checklist.</span></a></li>
+        <li><a href="#m9"><span class="t">9. Long-term improvement</span><span class="d">A practice plan by skill level.</span></a></li>
         <li><a href="#glossary"><span class="t">Glossary</span><span class="d">Quick definitions of every term used.</span></a></li>
       </ul>
     </div>
@@ -239,6 +248,7 @@ footer{margin-top:70px;padding-top:20px;border-top:1px solid var(--line);color:v
         <tr><td>Hybrid</td><td>Mixed</td><td>Adapting to matchup tempo; managing vitals (HP / SP / MP)</td><td>Opponents who commit to one style</td><td>Being out-tempoed or running dry on a resource</td></tr>
       </tbody>
     </table></div>
+    <p>Every class also has its own HP, SP and MP pools, and which one limits you differs by class. See <a href="#m5">Module 5: Resource management</a>.</p>
     <p>The strategic role of your class matters more than memorizing rotations. Ask: <em>what does my class want this fight to look like, and what does theirs want?</em></p>
   </section>
 
@@ -396,6 +406,7 @@ footer{margin-top:70px;padding-top:20px;border-top:1px solid var(--line);color:v
     <p>Tempo is who controls the pace of the engagement. You gain it by:</p>
     <ul>
       <li>Forcing the opponent to use cooldowns.</li>
+      <li>Forcing the opponent to spend HP, SP, MP and potions faster than they can afford (see <a href="#m5">Module 5</a>).</li>
       <li>Threatening attacks without committing to them.</li>
       <li>Controlling their movement options.</li>
     </ul>
@@ -416,24 +427,98 @@ footer{margin-top:70px;padding-top:20px;border-top:1px solid var(--line);color:v
       <li>Pause frequently.</li>
       <li>Force directional choices.</li>
     </ul>
-    <p>Controlled pressure creates panic, and panic creates mistakes.</p>
+    <p>Controlled pressure creates panic, and panic creates mistakes. In open PK, reckless chasing also drains your SP (see <a href="#open-pk">Open PK</a>).</p>
   </section>
 
-  <!-- MODULE 5 -->
+  <!-- MODULE 5: RESOURCES -->
   <section id="m5">
-    <h2>Module 5: The mental game</h2>
+    <h2>Module 5: Resource management (HP, SP and MP)</h2>
+    <p>Every class has its own pools, and managing them, yours and the enemy's, is a huge part of PvP. A fight is rarely lost on damage alone: it is lost when someone is out of the resource they needed at the moment they needed it.</p>
+
+    <h3 id="pools">5.1 The three pools</h3>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Pool</th><th>What it does</th><th>When it is the bottleneck</th></tr></thead>
+      <tbody>
+        <tr><td>HP</td><td>Your survival. Ultimately what a fight is decided on.</td><td>Always, but protected by managing the other two pools and your potions</td></tr>
+        <tr><td>SP</td><td>Fuels engaging and retreating, and the skills of SP-intensive classes</td><td>Open PK, and any time you are chasing or escaping; the main pool for SP-heavy classes</td></tr>
+        <tr><td>MP</td><td>Fuels spells and skills for mana-based classes</td><td>Arena, for most classes</td></tr>
+      </tbody>
+    </table></div>
+    <p>Which pool limits you depends on your class, so learn your class's pools first, then learn the enemy's.</p>
+
+    <h3>5.2 Micro vs macro management</h3>
+    <div class="tablewrap"><table>
+      <thead><tr><th></th><th>Micro (moment to moment)</th><th>Macro (across the whole engagement)</th></tr></thead>
+      <tbody>
+        <tr><td>Scope</td><td>Inside a single exchange or fight</td><td>Before, between and after fights, and the overall session</td></tr>
+        <tr><td>Questions</td><td>Do I pot now? Do I spend this skill? Are they about to run dry?</td><td>Do I take this fight? Am I topped up? Is it time to disengage and recover?</td></tr>
+        <tr><td>Skills</td><td>Watching bars, timing potions, tracking cooldowns, forcing the enemy to spend</td><td>Entering fights topped up, keeping potion stock, choosing when to retreat or reset, avoiding fights while low</td></tr>
+        <tr><td>Common failure</td><td>Potting on the wrong timing, wasting skills early</td><td>Taking a fight with a pool half empty, chasing until SP is gone</td></tr>
+      </tbody>
+    </table></div>
+    <p>Both levels apply to <strong>you and your enemy</strong>. While you manage your own bars, keep asking what the enemy has spent and what they cannot afford to do next.</p>
+
+    <h3 id="potions">5.3 Potion cooldown timing</h3>
+    <p>Each resource potion has its own cooldown. Examples are 6 seconds, 10 seconds or longer, depending on the potion. Treat a potion like a skill with a long cooldown, not an unlimited button.</p>
+    <ul>
+      <li><strong>A potion is a commitment.</strong> Use it too early and you waste the window. Use it too late and you are dead or dry.</li>
+      <li><strong>Timers run separately by resource,</strong> so you can stagger an HP potion and a mana or stamina potion instead of using them together.</li>
+      <li><strong>Pot before the critical point,</strong> not at it, and outside the enemy's threat range if you can.</li>
+      <li><strong>Track the enemy's potions.</strong> When they have just used one, their cooldown window is your opening to pressure, burst or force the issue.</li>
+      <li><strong>Bait potions.</strong> Threaten damage without committing so they pot early, then push while it is on cooldown.</li>
+    </ul>
+    <div class="drill"><p><b>Drill:</b> In a duel, count aloud the cooldown after each potion you or your partner uses. Note how often a fight turned inside that window, then adjust when you pot.</p></div>
+    <p class="note">Exact cooldowns vary by potion and resource. Check them in game and note the numbers for your class.</p>
+
+    <h3 id="open-pk">5.4 Open PK: SP is king</h3>
+    <p>In open PK (non-arena), SP is far more prevalent. Fights are not contained, so you are constantly engaging and retreating, and both cost SP.</p>
+    <ul>
+      <li><strong>Engage and retreat tactically.</strong> Spend SP to enter on your terms and to leave on your terms, not to chase aimlessly.</li>
+      <li><strong>Retreat before you are empty,</strong> not after. An empty SP bar means you can neither escape nor re-engage.</li>
+      <li><strong>Drain the enemy's SP.</strong> An opponent without SP cannot disengage or catch you, so forcing them to burn it is a real win condition.</li>
+      <li><strong>Map switching.</strong> Players moving from one map to another can be exploited at the transition, and switching maps can also be a way to disengage or reset. Use it deliberately and expect it from the enemy.</li>
+      <li><strong>Enter fights topped up.</strong> Do not engage while low unless you have a plan for it.</li>
+      <li><strong>Watch the wider situation:</strong> a long chase or a long fight leaves you drained for whoever shows up next.</li>
+    </ul>
+    <div class="drill"><p><b>Drill:</b> In open PK practice, give yourself a rule: disengage once SP drops to a set level. Track whether you stayed in control or got caught, then move the line.</p></div>
+
+    <h3 id="arena">5.5 Arena: mostly MP</h3>
+    <p>Arena is contained, so there is no free retreat and no map switching. Fights become resource wars, and for most classes <strong>mana management</strong> decides them.</p>
+    <ul>
+      <li><strong>Do not spam skills early.</strong> Mana spent first is mana missing when the fight is decided.</li>
+      <li><strong>Force the enemy to spend theirs.</strong> Pressure and threaten so they burn mana on low-value skills.</li>
+      <li><strong>Potion timing is critical.</strong> With each resource potion on its own cooldown, mistiming one can lose the whole fight.</li>
+      <li><strong>SP-intensive classes</strong> are the exception: for them, SP stays the main pool even in arena.</li>
+    </ul>
+
+    <h3>5.6 Open PK vs arena at a glance</h3>
+    <div class="tablewrap"><table>
+      <thead><tr><th></th><th>Open PK</th><th>Arena</th></tr></thead>
+      <tbody>
+        <tr><td>Main pressure</td><td>SP (engaging, retreating)</td><td>MP for most classes; SP for SP-intensive ones</td></tr>
+        <tr><td>Retreat</td><td>Possible, costs SP, can use map switching</td><td>Limited or none</td></tr>
+        <tr><td>Common mistake</td><td>Chasing until SP is empty</td><td>Spending mana early or mistiming potions</td></tr>
+        <tr><td>Macro focus</td><td>Choosing fights, staying topped up, recovering</td><td>Pacing mana and potions across a long fight</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- MODULE 6: MENTAL -->
+  <section id="m6">
+    <h2>Module 6: The mental game</h2>
     <p>PvP at a high level is heavily mental. Calm movement and controlled pacing pressure opponents into poor decisions.</p>
     <ul>
       <li><strong>Delay attacks intentionally</strong> so the opponent cannot read your timing.</li>
       <li><strong>Walk confidently into pressure zones</strong> when you have read the threat correctly.</li>
       <li><strong>Refuse to panic reposition.</strong> Panicked movement is predictable movement.</li>
+      <li><strong>Refuse to panic pot.</strong> Potions on cooldown cannot save you, so decide early, not in a panic.</li>
     </ul>
     <p>Players who look calm often force emotional mistakes from opponents. Elite players seem calm because they understand positioning, not because they react faster.</p>
   </section>
 
   <!-- MODULE 6 -->
-  <section id="m6">
-    <h2>Module 6: Common mistakes and fixes</h2>
+  <section id="m7">
+    <h2>Module 7: Common mistakes and fixes</h2>
     <div class="tablewrap"><table>
       <thead><tr><th>Mistake</th><th>Why it loses fights</th><th>Fix</th></tr></thead>
       <tbody>
@@ -443,14 +528,17 @@ footer{margin-top:70px;padding-top:20px;border-top:1px solid var(--line);color:v
         <tr><td>Wasting cooldowns early</td><td>Leaves no answer to key moments</td><td>Bait cooldowns first, then commit yours</td></tr>
         <tr><td>Ignoring movement patterns</td><td>Missing free openings</td><td>Identify their habit in the first seconds</td></tr>
         <tr><td>Overusing one movement technique</td><td>Becomes easy to read</td><td>Mix Z, 3-tile and plain movement</td></tr>
+        <tr><td>Potting too early or too late</td><td>Wastes a cooldown window or leaves you dead or dry when it matters</td><td>Pot before the critical point, outside threat range if you can, and track the timer</td></tr>
+        <tr><td>Burning SP on pointless chasing (open PK)</td><td>Leaves no SP to retreat or re-engage</td><td>Disengage before SP is empty and save it for decisive moments</td></tr>
+        <tr><td>Ignoring the enemy's resources</td><td>Missed windows when they are dry or on cooldown</td><td>Track what they have spent and which potions they just used</td></tr>
         <tr><td>Stopping mid-transition near melee</td><td>Exposed to the 2-Tile Rule</td><td>Finish the step or keep moving</td></tr>
       </tbody>
     </table></div>
   </section>
 
   <!-- MODULE 7 -->
-  <section id="m7">
-    <h2>Module 7: Matchups and a fight routine</h2>
+  <section id="m8">
+    <h2>Module 8: Matchups and a fight routine</h2>
     <p>Matchups are not simply damage comparisons. Most fights come down to:</p>
     <ul>
       <li>Range control</li>
@@ -467,6 +555,8 @@ footer{margin-top:70px;padding-top:20px;border-top:1px solid var(--line);color:v
         <label><input type="checkbox"><span>What class am I facing, and what range does it want?</span></label>
         <label><input type="checkbox"><span>What are its key cooldowns?</span></label>
         <label><input type="checkbox"><span>Where is the nearest terrain or space advantage for me?</span></label>
+        <label><input type="checkbox"><span>Are my HP, SP and MP topped up, and is my potion stock enough?</span></label>
+        <label><input type="checkbox"><span>Which of my pools is the bottleneck in this matchup?</span></label>
       </div>
       <div class="check">
         <h4>During the fight</h4>
@@ -475,20 +565,23 @@ footer{margin-top:70px;padding-top:20px;border-top:1px solid var(--line);color:v
         <label><input type="checkbox"><span>Is their cooldown available right now?</span></label>
         <label><input type="checkbox"><span>Am I about to commit? Can they punish it?</span></label>
         <label><input type="checkbox"><span>Am I staying calm, or reacting out of panic?</span></label>
+        <label><input type="checkbox"><span>Which potion cooldowns are ready, mine and theirs?</span></label>
+        <label><input type="checkbox"><span>What has the enemy spent, and are they close to dry?</span></label>
       </div>
       <div class="check">
         <h4>After the fight (win or lose)</h4>
         <label><input type="checkbox"><span>Where did the first positional mistake happen?</span></label>
         <label><input type="checkbox"><span>Did I fall into a predictable pattern?</span></label>
         <label><input type="checkbox"><span>Did I waste a cooldown or overcommit?</span></label>
+        <label><input type="checkbox"><span>Did I run dry on a resource, or pot too early or too late?</span></label>
       </div>
     </div>
     <button class="reset" id="resetChecks" type="button">Clear all ticks</button>
   </section>
 
   <!-- MODULE 8 -->
-  <section id="m8">
-    <h2>Module 8: Long-term improvement</h2>
+  <section id="m9">
+    <h2>Module 9: Long-term improvement</h2>
     <p>Strong players improve by studying:</p>
     <ul>
       <li>Movement habits (theirs and yours)</li>
@@ -504,6 +597,7 @@ footer{margin-top:70px;padding-top:20px;border-top:1px solid var(--line);color:v
         <tr><td>Beginner</td><td>Basic spacing, threat range</td><td>Duels where you only practice holding your ideal distance</td></tr>
         <tr><td>Intermediate</td><td>3-tile movement, Z Moving, prediction</td><td>Mix techniques in duels; track which ones the opponent reads</td></tr>
         <tr><td>Advanced</td><td>2-Tile Rule, Reverse Z, phasing</td><td>Partner drills from Module 3, then live fights</td></tr>
+        <tr><td>Intermediate to advanced</td><td>Micro and macro resource control</td><td>Fight with potion timers in mind; log when you went low on each pool and why</td></tr>
         <tr><td>Ongoing</td><td>Review</td><td>Record fights and note the first positional mistake in each</td></tr>
       </tbody>
     </table></div>
@@ -525,6 +619,13 @@ footer{margin-top:70px;padding-top:20px;border-top:1px solid var(--line);color:v
         <tr><td>Tempo</td><td>Who controls the pace of the fight</td></tr>
         <tr><td>Commitment frames</td><td>Windows where an action locks you in and leaves you vulnerable</td></tr>
         <tr><td>Space control</td><td>Controlling where the fight takes place</td></tr>
+        <tr><td>HP / SP / MP</td><td>Health, stamina and mana: the three resource pools, which differ by class</td></tr>
+        <tr><td>Micro management</td><td>Moment-to-moment control of resources within a fight</td></tr>
+        <tr><td>Macro management</td><td>Controlling resources across the whole engagement, including when to take or leave a fight</td></tr>
+        <tr><td>Potion cooldown</td><td>The lockout after using a resource potion before the next one can be used (each resource has its own timer)</td></tr>
+        <tr><td>Open PK</td><td>PK outside the arena, in the open world, where engaging, retreating and map switching all matter</td></tr>
+        <tr><td>Arena</td><td>Contained PvP where there is no free retreat and mana is usually the main pressure</td></tr>
+        <tr><td>Map switching</td><td>Moving from one map to another, which can be used to disengage or exploited by opponents at the transition</td></tr>
       </tbody>
     </table></div>
   </section>
@@ -535,6 +636,7 @@ footer{margin-top:70px;padding-top:20px;border-top:1px solid var(--line);color:v
     <p>This syllabus will keep expanding. Planned next:</p>
     <ul>
       <li>Class-specific matchup guides</li>
+      <li>Class-by-class HP, SP and MP pool breakdowns and potion timers</li>
       <li>Arena diagrams</li>
       <li>Teamfight positioning</li>
       <li>PK survival strategies</li>
