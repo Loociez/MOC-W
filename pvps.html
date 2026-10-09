@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mirage Online Classic PvP / PK Combat &amp; Movement Syllabus</title>
+<meta name="description" content="A structured PvP syllabus for Mirage Online Classic: movement techniques, space control, tempo, mental game, drills and checklists.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#150c26;
+  --bg-deep:#0f081d;
+  --panel:#21133b;
+  --panel-2:#2b1a4d;
+  --line:#41296d;
+  --gold:#e3b94a;
+  --gold-soft:#f2d487;
+  --gold-dim:#8f7430;
+  --text:#ece6f8;
+  --muted:#ad9fcb;
+  --drill:#2a1d12;
+  --radius:10px;
+  --head:"Marcellus","Palatino Linotype",Palatino,Georgia,serif;
+  --body:"Source Sans 3","Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;
+  --side:272px;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:76px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--gold-soft);text-decoration-color:var(--gold-dim);text-underline-offset:3px}
+a:hover{color:var(--gold)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+/* top bar (mobile) */
+.topbar{display:none;position:sticky;top:0;z-index:30;background:var(--bg-deep);border-bottom:1px solid var(--line);padding:10px 16px;align-items:center;justify-content:space-between;gap:12px}
+.topbar b{font-family:var(--head);font-weight:400;color:var(--gold);font-size:1.05rem}
+.topbar button{background:var(--panel-2);color:var(--gold-soft);border:1px solid var(--gold-dim);border-radius:8px;padding:8px 14px;font:600 .95rem var(--body);cursor:pointer}
+
+/* layout */
+.shell{display:grid;grid-template-columns:var(--side) minmax(0,1fr);min-height:100vh}
+nav.side{position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;background:var(--bg-deep);border-right:1px solid var(--line);padding:26px 18px 30px}
+.brand{display:block;font-family:var(--head);color:var(--gold);font-size:1.3rem;line-height:1.25;text-decoration:none;margin-bottom:4px}
+.brand-sub{color:var(--muted);font-size:.9rem;margin:0 0 22px}
+nav.side ol,nav.side ul{list-style:none;margin:0;padding:0}
+nav.side li a{display:block;padding:7px 12px;border-left:3px solid transparent;border-radius:0 8px 8px 0;color:var(--text);text-decoration:none;font-size:.97rem;line-height:1.35}
+nav.side li a:hover{background:var(--panel)}
+nav.side li a.active{background:var(--panel-2);border-left-color:var(--gold);color:var(--gold-soft);font-weight:600}
+nav.side .group{margin:20px 0 6px 12px;color:var(--muted);font-size:.85rem;font-weight:600}
+
+main{padding:0 clamp(20px,5vw,64px) 80px;max-width:1040px;width:100%}
+section{padding-top:56px}
+h1,h2,h3,h4{font-family:var(--head);font-weight:400;line-height:1.2;color:var(--gold-soft)}
+h2{font-size:clamp(1.7rem,3.2vw,2.2rem);margin:0 0 6px;padding-bottom:12px;border-bottom:1px solid var(--line);color:var(--gold)}
+h3{font-size:1.35rem;margin:34px 0 8px}
+p{margin:0 0 14px;max-width:72ch}
+ul,ol{margin:0 0 16px;padding-left:1.3em;max-width:72ch}
+li{margin-bottom:4px}
+li::marker{color:var(--gold)}
+strong{color:#fff}
+
+/* hero */
+.hero{padding:64px 0 8px}
+.hero h1{font-size:clamp(2.2rem,5.4vw,3.6rem);margin:0 0 14px;color:var(--gold)}
+.hero .lede{font-size:1.15rem;color:var(--text);max-width:62ch}
+.byline{color:var(--muted);font-size:.95rem;margin-bottom:20px}
+.howto{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:var(--radius);padding:16px 20px;margin:22px 0 30px;max-width:72ch}
+.howto p{margin:0}
+
+.quick{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:0;padding:0;list-style:none;max-width:none}
+.quick li{margin:0}
+.quick a{display:block;height:100%;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;text-decoration:none;color:var(--text);transition:border-color .15s,background .15s}
+.quick a:hover{border-color:var(--gold);background:var(--panel-2)}
+.quick .t{display:block;font-family:var(--head);font-size:1.12rem;color:var(--gold-soft);margin-bottom:3px}
+.quick .d{display:block;font-size:.93rem;color:var(--muted);line-height:1.45}
+.quick-title{margin:34px 0 12px;font-size:1.25rem;color:var(--gold-soft)}
+
+/* quote */
+blockquote{margin:18px 0;padding:14px 20px;background:var(--panel);border-left:4px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;font-family:var(--head);font-size:1.15rem;color:var(--gold-soft);max-width:72ch}
+
+/* tables */
+.tablewrap{overflow-x:auto;margin:16px 0 22px;border:1px solid var(--line);border-radius:var(--radius)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:.96rem}
+th,td{text-align:left;padding:10px 14px;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--panel-2);color:var(--gold-soft);font-weight:600;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+tbody tr:nth-child(even) td{background:rgba(255,255,255,.025)}
+td:first-child{color:#fff;font-weight:600}
+
+/* technique cards */
+.tech{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:6px 22px 14px;margin:26px 0}
+.tech h3{margin-top:18px}
+.tech .tag{display:inline-block;font-size:.85rem;color:var(--bg-deep);background:var(--gold);border-radius:999px;padding:1px 10px;font-weight:600;margin-left:8px;vertical-align:middle;font-family:var(--body)}
+.field{margin:14px 0 0}
+.field>b{display:block;color:var(--gold);font-size:.95rem;margin-bottom:2px}
+.field p,.field ul,.field ol{margin-bottom:6px}
+.drill{background:var(--drill);border:1px solid var(--gold-dim);border-left:4px solid var(--gold);border-radius:8px;padding:10px 16px;margin:16px 0 4px}
+.drill b{color:var(--gold)}
+.drill p{margin:0}
+.note{color:var(--muted);font-size:.95rem;font-style:italic}
+
+/* checklist */
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:16px 0}
+.check{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 18px}
+.check h4{margin:0 0 8px;font-size:1.1rem}
+.check label{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:pointer;line-height:1.4}
+.check input{accent-color:var(--gold);margin-top:4px;width:17px;height:17px;flex:none}
+.check input:checked+span{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--gold-dim)}
+.reset{background:transparent;color:var(--gold-soft);border:1px solid var(--gold-dim);border-radius:8px;padding:7px 14px;font:600 .92rem var(--body);cursor:pointer}
+.reset:hover{background:var(--panel-2)}
+
+footer{margin-top:70px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.93rem}
+.totop{position:fixed;right:18px;bottom:18px;z-index:20;background:var(--panel-2);color:var(--gold-soft);border:1px solid var(--gold-dim);border-radius:999px;padding:9px 16px;font:600 .9rem var(--body);text-decoration:none;opacity:0;pointer-events:none;transition:opacity .2s}
+.totop.show{opacity:1;pointer-events:auto}
+
+@media (max-width:900px){
+  .topbar{display:flex}
+  .shell{grid-template-columns:1fr}
+  nav.side{position:fixed;inset:0 auto 0 0;width:min(86vw,320px);height:100%;z-index:40;transform:translateX(-102%);transition:transform .22s ease;box-shadow:8px 0 30px rgba(0,0,0,.5)}
+  nav.side.open{transform:none}
+  .scrim{display:none;position:fixed;inset:0;background:rgba(8,3,18,.6);z-index:35}
+  .scrim.open{display:block}
+  html{scroll-padding-top:70px}
+  .hero{padding-top:34px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media print{nav.side,.topbar,.totop,.quick-wrap{display:none}.shell{display:block}body{background:#fff;color:#000}h1,h2,h3,h4,strong,td:first-child{color:#000}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <b>Mirage PvP Syllabus</b>
+  <button id="menuBtn" aria-expanded="false" aria-controls="sidenav">Modules</button>
+</div>
+<div class="scrim" id="scrim"></div>
+
+<div class="shell">
+<nav class="side" id="sidenav" aria-label="Syllabus sections">
+  <a class="brand" href="#top">Mirage Online Classic PvP Syllabus</a>
+  <p class="brand-sub">PvP / PK combat and movement</p>
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+  </ul>
+  <div class="group">Modules</div>
+  <ol>
+    <li><a href="#m1">1. Foundations</a></li>
+    <li><a href="#m2">2. Class archetypes</a></li>
+    <li><a href="#m3">3. Movement toolkit</a></li>
+    <li><a href="#m4">4. Combat strategy</a></li>
+    <li><a href="#m5">5. The mental game</a></li>
+    <li><a href="#m6">6. Mistakes and fixes</a></li>
+    <li><a href="#m7">7. Matchups and fight routine</a></li>
+    <li><a href="#m8">8. Long-term improvement</a></li>
+  </ol>
+  <div class="group">Movement techniques</div>
+  <ul>
+    <li><a href="#two-tile">2-Tile Rule</a></li>
+    <li><a href="#three-tile">3-Tile Movement</a></li>
+    <li><a href="#z-moving">Z Moving</a></li>
+    <li><a href="#reverse-z">Reverse Z Moving</a></li>
+    <li><a href="#phasing">Phasing</a></li>
+  </ul>
+  <div class="group">Reference</div>
+  <ul>
+    <li><a href="#checklist">Fight checklist</a></li>
+    <li><a href="#glossary">Glossary</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+  </ul>
+</nav>
+
+<main id="top">
+  <header class="hero" id="overview">
+    <h1>PvP / PK Combat &amp; Movement Syllabus</h1>
+    <p class="byline">Mirage Online Classic &nbsp;|&nbsp; By Loocie &nbsp;|&nbsp; Revised edition, original updated 13/05/26</p>
+    <p class="lede">A general framework for high-level PvP in Mirage Online Classic. It assumes you already know turn-hitting and the basics of how movement and attacking work. Every class has its own playstyle (defensive, counter-attacking, zone control, aggressive), so treat this as a generalized guide, not a class guide.</p>
+    <div class="howto"><p><strong>How to use it:</strong> Read one module at a time, then do its drills before moving on. Most improvement comes from deliberate practice and reviewing your own fights, not from reading.</p></div>
+
+    <div class="quick-wrap">
+      <h2 class="quick-title" style="border:0;padding:0;font-size:1.25rem">Quick links</h2>
+      <ul class="quick">
+        <li><a href="#m1"><span class="t">1. Foundations</span><span class="d">Philosophy, tile-based combat, the six core ideas.</span></a></li>
+        <li><a href="#m2"><span class="t">2. Class archetypes</span><span class="d">Melee, ranged, zone control and hybrid roles.</span></a></li>
+        <li><a href="#m3"><span class="t">3. Movement toolkit</span><span class="d">2-Tile Rule, 3-Tile, Z, Reverse Z, phasing.</span></a></li>
+        <li><a href="#m4"><span class="t">4. Combat strategy</span><span class="d">Threat range, space, prediction, tempo, punishment.</span></a></li>
+        <li><a href="#m5"><span class="t">5. The mental game</span><span class="d">Staying calm and making opponents panic.</span></a></li>
+        <li><a href="#m6"><span class="t">6. Mistakes and fixes</span><span class="d">Why fights are lost and how to correct it.</span></a></li>
+        <li><a href="#m7"><span class="t">7. Matchups and routine</span><span class="d">Matchup thinking and a before, during, after checklist.</span></a></li>
+        <li><a href="#m8"><span class="t">8. Long-term improvement</span><span class="d">A practice plan by skill level.</span></a></li>
+        <li><a href="#glossary"><span class="t">Glossary</span><span class="d">Quick definitions of every term used.</span></a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- MODULE 1 -->
+  <section id="m1">
+    <h2>Module 1: Foundations</h2>
+
+    <h3>1.1 Core philosophy</h3>
+    <p>Strong PvP players do not simply react faster. They manipulate the <strong>pace, shape and rhythm</strong> of a fight. High-level PvP revolves around six ideas:</p>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Concept</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td>Space control</td><td>Deciding where the fight happens</td></tr>
+        <tr><td>Tempo management</td><td>Deciding when and how fast it happens</td></tr>
+        <tr><td>Threat range awareness</td><td>Knowing what can hit you, and what you can hit</td></tr>
+        <tr><td>Animation punishment</td><td>Hitting opponents during their vulnerable windows</td></tr>
+        <tr><td>Movement prediction</td><td>Attacking where they will be, not where they are</td></tr>
+        <tr><td>Psychological pressure</td><td>Making the opponent decide badly</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>1.2 Tile-based real-time combat</h3>
+    <p>Mirage Online Classic is unusual: <strong>movement is tile-based, but decisions happen in real time.</strong> This has several consequences:</p>
+    <ul>
+      <li>Positioning matters constantly.</li>
+      <li>Every tile transition is a moment of vulnerability.</li>
+      <li>Direction changes reveal your intention.</li>
+      <li>Threat ranges define engagement zones.</li>
+    </ul>
+    <p>Because of this, PvP is less about reaction speed and more about <strong>prediction, spacing discipline and controlling movement patterns.</strong></p>
+
+    <h3>1.3 The one-line summary</h3>
+    <blockquote>Good players trade damage. Great players control tempo. Most losses begin with positional mistakes, not mechanical ones.</blockquote>
+  </section>
+
+  <!-- MODULE 2 -->
+  <section id="m2">
+    <h2>Module 2: Class archetypes</h2>
+    <p>Different classes apply pressure in different ways. Know your own role and what the enemy's role wants from you.</p>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Archetype</th><th>Typical range</th><th>How it wins</th><th>What it punishes</th><th>What beats it</th></tr></thead>
+      <tbody>
+        <tr><td>Barbarian / Melee</td><td>1 tile</td><td>Collapsing space, sustained pressure</td><td>Predictable movement</td><td>Being kept at range, bad angles, forced chasing</td></tr>
+        <tr><td>Marksman / Long range</td><td>Long (slightly better angles than other ranged classes)</td><td>Holding favorable distance and firing lanes</td><td>Overcommitment</td><td>Closed distance, pressure, being forced to reposition</td></tr>
+        <tr><td>Warlock / Zone control</td><td>Area (AoE)</td><td>Making movement paths unsafe, forcing defensive repositioning</td><td>Walking blindly through zones</td><td>Reading zones, going around or timing through them, punishing casts</td></tr>
+        <tr><td>Hybrid</td><td>Mixed</td><td>Adapting to matchup tempo; managing vitals (HP / SP / MP)</td><td>Opponents who commit to one style</td><td>Being out-tempoed or running dry on a resource</td></tr>
+      </tbody>
+    </table></div>
+    <p>The strategic role of your class matters more than memorizing rotations. Ask: <em>what does my class want this fight to look like, and what does theirs want?</em></p>
+  </section>
+
+  <!-- MODULE 3 -->
+  <section id="m3">
+    <h2>Module 3: The movement toolkit</h2>
+    <p>Movement is the core skill of Mirage PvP. Each technique below follows the same format so it is easy to study.</p>
+
+    <article class="tech" id="two-tile">
+      <h3>3.1 The 2-Tile Rule <span class="tag">Advanced melee</span></h3>
+      <div class="field"><b>What it is</b><p>An unofficial rule. Melee attacks are generally limited to 1 tile, but a player who is mid-transition between tiles can briefly be hit from what appears to be 2 tiles away.</p></div>
+      <div class="field"><b>Why it happens</b>
+        <ul>
+          <li>Movement is visually interpolated in real time.</li>
+          <li>Sprites transition between tiles before fully settling.</li>
+          <li>During that window, hit validation can still register.</li>
+        </ul>
+      </div>
+      <div class="field"><b>Practical rule of thumb</b><p>If less than roughly <strong>60%</strong> of the sprite has visually entered the next tile, the player may still count as within melee reach.</p></div>
+      <div class="field"><b>How melee players use it</b>
+        <ul>
+          <li>Swing during the opponent's movement transitions.</li>
+          <li>Predict the direction they are moving and strike before the tile completes.</li>
+          <li>Time attacks to land just before the target settles.</li>
+        </ul>
+      </div>
+      <div class="field"><b>How to defend against it</b>
+        <ul>
+          <li>Do not assume 2 tiles is safe when you are mid-step.</li>
+          <li>Avoid stopping or turning mid-transition when a melee player is near.</li>
+          <li>Break rhythm so they cannot time your transitions (see Z Moving and 3-Tile Movement).</li>
+        </ul>
+      </div>
+      <div class="drill"><p><b>Drill:</b> In a duel with a friend, have them practice swinging only while you walk away at 2 tiles. Note how often it connects, and at what point in your step. Then swap roles.</p></div>
+      <p class="note">The 60% figure is a guideline from experience. Test it yourself and adjust.</p>
+    </article>
+
+    <article class="tech" id="three-tile">
+      <h3>3.2 3-Tile Movement</h3>
+      <div class="field"><b>What it is</b><p>Moving in deliberate groups of three tiles instead of single-step or double-step movement.</p></div>
+      <div class="field"><b>Why it works</b><p>It creates awkward angles, reduces the time you spend parallel to enemy movement, and makes your stopping points hard to predict.</p></div>
+      <div class="field"><b>Use it to</b>
+        <ul>
+          <li>Control spacing more efficiently.</li>
+          <li>Set movement traps.</li>
+          <li>Force opponents onto predictable paths.</li>
+          <li>Create stronger counterplay opportunities.</li>
+          <li>Stop opponents from comfortably matching your movement rhythm.</li>
+        </ul>
+      </div>
+      <div class="field"><b>Risk</b><p>If you do it on a fixed beat, a good player will learn the beat. Vary where you stop and when you change direction.</p></div>
+      <div class="drill"><p><b>Drill:</b> Practice moving in 3-tile segments around a fixed object, changing direction after each group. Then do it while someone follows you and see whether they can predict where you will stop.</p></div>
+    </article>
+
+    <article class="tech" id="z-moving">
+      <h3>3.3 Z Moving</h3>
+      <div class="field"><b>What it is</b><p>Queueing directional inputs rapidly (holding or chaining several movement keys) so your character zig-zags across tiles in a Z shape.</p></div>
+      <div class="field"><b>What it does</b>
+        <ul>
+          <li>Creates irregular movement timing.</li>
+          <li>Makes targeting less consistent.</li>
+          <li>Can disrupt melee timing windows.</li>
+          <li>Disguises where you intend to end up.</li>
+        </ul>
+      </div>
+      <div class="field"><b>Risk</b><p>Overused or predictable Z Moving is easy to read, and experienced players will punish the transitions. It is often seen as an amateur technique when it becomes a habit. Use it selectively, as one tool among several.</p></div>
+      <div class="drill"><p><b>Drill:</b> Alternate between Z Moving, 3-tile movement and plain walking during a duel. The goal is that your opponent cannot tell which one is coming next.</p></div>
+    </article>
+
+    <article class="tech" id="reverse-z">
+      <h3>3.4 Reverse Z Moving <span class="tag">Counter technique</span></h3>
+      <div class="field"><b>What it is</b><p>An advanced counter-engagement technique used against aggressive opponents who follow your path.</p></div>
+      <div class="field"><b>How it works</b>
+        <ol>
+          <li>Begin with a standard Z pattern.</li>
+          <li>Encourage the opponent to commit to following your path.</li>
+          <li>Abruptly reverse direction mid-pattern.</li>
+          <li>Re-enter the opponent's movement line unexpectedly.</li>
+        </ol>
+      </div>
+      <div class="field"><b>Result when timed well</b><p>The opponent loses rhythm, mispositions, overcommits into your pressure, and may trigger a phasing interaction. It is very effective at breaking momentum and resetting positional control.</p></div>
+      <div class="field"><b>Key to success</b><p>The opponent must commit to the chase first. Do not reverse too early, or they will simply stop.</p></div>
+      <div class="drill"><p><b>Drill:</b> Have a partner chase you with no other instruction. Run a Z pattern for a few steps, then reverse. Track how often they overshoot or lose position.</p></div>
+    </article>
+
+    <article class="tech" id="phasing">
+      <h3>3.5 Phasing <span class="tag">Advanced</span></h3>
+      <div class="field"><b>What it is</b><p>Two players try to enter the same tile at the same time and briefly pass through each other instead of colliding or blocking.</p></div>
+      <div class="field"><b>How to recreate it on purpose</b>
+        <p>Many players think phasing is random. Skilled players cause it using:</p>
+        <ul>
+          <li>Predictive movement</li>
+          <li>Z Movement patterns</li>
+          <li>Reverse Z techniques</li>
+          <li>Reading the opponent's movement timing</li>
+        </ul>
+      </div>
+      <div class="field"><b>During a successful phase</b>
+        <ul>
+          <li>Both players occupy the transition space at the same moment.</li>
+          <li>Normal collision does not happen.</li>
+          <li>Players pass through one another.</li>
+          <li>Attacks can often be executed during the crossover.</li>
+        </ul>
+      </div>
+      <div class="field"><b>Why it matters</b><p>It breaks expected positioning, disorients the opponent, resets engagement angles, creates surprise offensive opportunities, and punishes predictable aggression. At a high level, controlled phasing is both a movement tool and a psychological weapon.</p></div>
+      <div class="drill"><p><b>Drill:</b> Duel a partner who always walks straight at you. Try to phase through them and attack on the crossover. Count successes, then repeat against someone who varies their approach.</p></div>
+    </article>
+
+    <h3>3.6 Which technique when?</h3>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Situation</th><th>Good option</th></tr></thead>
+      <tbody>
+        <tr><td>Opponent is chasing you in a straight line</td><td>Reverse Z, or aim for a phase</td></tr>
+        <tr><td>You need to disguise your stopping point</td><td>3-tile movement</td></tr>
+        <tr><td>You need to break a melee swing rhythm</td><td>Z Moving (briefly)</td></tr>
+        <tr><td>Opponent is stationary or cautious</td><td>Slow advance, do not Z</td></tr>
+        <tr><td>You are mid-step and a melee player is near</td><td>Avoid stopping; keep moving or commit to the next tile</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- MODULE 4 -->
+  <section id="m4">
+    <h2>Module 4: Combat strategy</h2>
+
+    <h3>4.1 Threat range awareness</h3>
+    <p>Every class projects a different danger radius. Constantly check:</p>
+    <ul>
+      <li>Effective attack range (yours and theirs)</li>
+      <li>Opponent cooldown availability</li>
+      <li>Opponent movement direction</li>
+      <li>Engagement timing</li>
+    </ul>
+    <p>Much of PvP is forcing the opponent into <strong>uncomfortable distances</strong>: too close for a ranged class, too far for a melee class.</p>
+
+    <h3>4.2 Space control</h3>
+    <p>High-level PvP is largely about controlling <strong>where fights happen.</strong> Winning space control usually means winning the fight.</p>
+    <ul>
+      <li>Melee classes collapse distance.</li>
+      <li>Marksman classes maintain firing lanes.</li>
+      <li>Warlocks create movement denial zones.</li>
+    </ul>
+
+    <h3>4.3 Movement prediction</h3>
+    <p>Players develop habits. Common ones:</p>
+    <ul>
+      <li>Repeated lateral dodging</li>
+      <li>Predictable retreat paths</li>
+      <li>Rhythm-based repositioning</li>
+    </ul>
+    <p>Advanced players attack <strong>where the opponent is about to move</strong>, not where they currently stand. Spend the first moments of a fight identifying their habit, then exploit it.</p>
+
+    <h3>4.4 Tempo and pressure</h3>
+    <p>Tempo is who controls the pace of the engagement. You gain it by:</p>
+    <ul>
+      <li>Forcing the opponent to use cooldowns.</li>
+      <li>Threatening attacks without committing to them.</li>
+      <li>Controlling their movement options.</li>
+    </ul>
+
+    <h3>4.5 Animation commitment punishment</h3>
+    <p>Every major action has commitment frames during which the player cannot react freely. Common examples:</p>
+    <ul>
+      <li>Casting spells</li>
+      <li>Firing burst attacks</li>
+      <li>Aggressive movement commits</li>
+    </ul>
+    <p>Advanced PvP focuses heavily on punishing these windows. Watch for the moment your opponent commits, then strike while they are locked in.</p>
+
+    <h3>4.6 Collapse space, do not chase</h3>
+    <p>Reckless chasing hands spacing control to the opponent. Instead:</p>
+    <ul>
+      <li>Advance slowly.</li>
+      <li>Pause frequently.</li>
+      <li>Force directional choices.</li>
+    </ul>
+    <p>Controlled pressure creates panic, and panic creates mistakes.</p>
+  </section>
+
+  <!-- MODULE 5 -->
+  <section id="m5">
+    <h2>Module 5: The mental game</h2>
+    <p>PvP at a high level is heavily mental. Calm movement and controlled pacing pressure opponents into poor decisions.</p>
+    <ul>
+      <li><strong>Delay attacks intentionally</strong> so the opponent cannot read your timing.</li>
+      <li><strong>Walk confidently into pressure zones</strong> when you have read the threat correctly.</li>
+      <li><strong>Refuse to panic reposition.</strong> Panicked movement is predictable movement.</li>
+    </ul>
+    <p>Players who look calm often force emotional mistakes from opponents. Elite players seem calm because they understand positioning, not because they react faster.</p>
+  </section>
+
+  <!-- MODULE 6 -->
+  <section id="m6">
+    <h2>Module 6: Common mistakes and fixes</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Mistake</th><th>Why it loses fights</th><th>Fix</th></tr></thead>
+      <tbody>
+        <tr><td>Overcommitting to attacks</td><td>Leaves you in a vulnerable window</td><td>Attack only when the opponent cannot punish the commitment</td></tr>
+        <tr><td>Chasing predictably</td><td>Gives away spacing control</td><td>Collapse space slowly; pause often</td></tr>
+        <tr><td>Panicking under pressure</td><td>Predictable retreat paths</td><td>Take one calm, deliberate step; reset your angle</td></tr>
+        <tr><td>Wasting cooldowns early</td><td>Leaves no answer to key moments</td><td>Bait cooldowns first, then commit yours</td></tr>
+        <tr><td>Ignoring movement patterns</td><td>Missing free openings</td><td>Identify their habit in the first seconds</td></tr>
+        <tr><td>Overusing one movement technique</td><td>Becomes easy to read</td><td>Mix Z, 3-tile and plain movement</td></tr>
+        <tr><td>Stopping mid-transition near melee</td><td>Exposed to the 2-Tile Rule</td><td>Finish the step or keep moving</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- MODULE 7 -->
+  <section id="m7">
+    <h2>Module 7: Matchups and a fight routine</h2>
+    <p>Matchups are not simply damage comparisons. Most fights come down to:</p>
+    <ul>
+      <li>Range control</li>
+      <li>Pressure timing</li>
+      <li>Cooldown efficiency</li>
+      <li>Movement manipulation</li>
+    </ul>
+
+    <h3 id="checklist">Fight checklist</h3>
+    <p>Tick items off as you review a fight. Nothing is saved, so refreshing the page clears them.</p>
+    <div class="checks">
+      <div class="check">
+        <h4>Before the fight</h4>
+        <label><input type="checkbox"><span>What class am I facing, and what range does it want?</span></label>
+        <label><input type="checkbox"><span>What are its key cooldowns?</span></label>
+        <label><input type="checkbox"><span>Where is the nearest terrain or space advantage for me?</span></label>
+      </div>
+      <div class="check">
+        <h4>During the fight</h4>
+        <label><input type="checkbox"><span>Am I choosing the distance, or are they?</span></label>
+        <label><input type="checkbox"><span>Have I identified their movement habit?</span></label>
+        <label><input type="checkbox"><span>Is their cooldown available right now?</span></label>
+        <label><input type="checkbox"><span>Am I about to commit? Can they punish it?</span></label>
+        <label><input type="checkbox"><span>Am I staying calm, or reacting out of panic?</span></label>
+      </div>
+      <div class="check">
+        <h4>After the fight (win or lose)</h4>
+        <label><input type="checkbox"><span>Where did the first positional mistake happen?</span></label>
+        <label><input type="checkbox"><span>Did I fall into a predictable pattern?</span></label>
+        <label><input type="checkbox"><span>Did I waste a cooldown or overcommit?</span></label>
+      </div>
+    </div>
+    <button class="reset" id="resetChecks" type="button">Clear all ticks</button>
+  </section>
+
+  <!-- MODULE 8 -->
+  <section id="m8">
+    <h2>Module 8: Long-term improvement</h2>
+    <p>Strong players improve by studying:</p>
+    <ul>
+      <li>Movement habits (theirs and yours)</li>
+      <li>Positioning errors</li>
+      <li>Cooldown timing</li>
+      <li>Engagement pacing</li>
+    </ul>
+
+    <h3>Suggested practice plan</h3>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Stage</th><th>Focus</th><th>Practice</th></tr></thead>
+      <tbody>
+        <tr><td>Beginner</td><td>Basic spacing, threat range</td><td>Duels where you only practice holding your ideal distance</td></tr>
+        <tr><td>Intermediate</td><td>3-tile movement, Z Moving, prediction</td><td>Mix techniques in duels; track which ones the opponent reads</td></tr>
+        <tr><td>Advanced</td><td>2-Tile Rule, Reverse Z, phasing</td><td>Partner drills from Module 3, then live fights</td></tr>
+        <tr><td>Ongoing</td><td>Review</td><td>Record fights and note the first positional mistake in each</td></tr>
+      </tbody>
+    </table></div>
+    <blockquote>After every fight, identify the first mistake, not the last one. It is almost always positional.</blockquote>
+  </section>
+
+  <!-- GLOSSARY -->
+  <section id="glossary">
+    <h2>Glossary</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td>Turn-hitting</td><td>Attacking by turning to face a target and hitting without needing to fully move</td></tr>
+        <tr><td>2-Tile Rule</td><td>Mid-transition players can be hit from apparent 2-tile range</td></tr>
+        <tr><td>3-Tile Movement</td><td>Moving in groups of three tiles to control angles</td></tr>
+        <tr><td>Z Moving</td><td>Rapid queued inputs producing a zig-zag path</td></tr>
+        <tr><td>Reverse Z</td><td>Reversing mid-Z to re-enter the chaser's line</td></tr>
+        <tr><td>Phasing</td><td>Two players entering the same tile and passing through each other</td></tr>
+        <tr><td>Tempo</td><td>Who controls the pace of the fight</td></tr>
+        <tr><td>Commitment frames</td><td>Windows where an action locks you in and leaves you vulnerable</td></tr>
+        <tr><td>Space control</td><td>Controlling where the fight takes place</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section id="roadmap">
+    <h2>Roadmap: planned additions</h2>
+    <p>This syllabus will keep expanding. Planned next:</p>
+    <ul>
+      <li>Class-specific matchup guides</li>
+      <li>Arena diagrams</li>
+      <li>Teamfight positioning</li>
+      <li>PK survival strategies</li>
+      <li>Advanced melee movement</li>
+      <li>Cooldown tracking systems</li>
+      <li>Mental warfare and pressure manipulation</li>
+    </ul>
+  </section>
+
+  <footer>Mirage Online Classic PvP / PK Combat &amp; Movement Syllabus by Loocie. Original last updated 13/05/26.</footer>
+</main>
+</div>
+
+<a class="totop" id="totop" href="#top">Back to top</a>
+
+<script>
+(function(){
+  var side=document.getElementById('sidenav');
+  var btn=document.getElementById('menuBtn');
+  var scrim=document.getElementById('scrim');
+  function setMenu(open){
+    side.classList.toggle('open',open);
+    scrim.classList.toggle('open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  }
+  btn.addEventListener('click',function(){setMenu(!side.classList.contains('open'))});
+  scrim.addEventListener('click',function(){setMenu(false)});
+  side.addEventListener('click',function(e){if(e.target.tagName==='A')setMenu(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+  /* scroll spy */
+  var links=Array.prototype.slice.call(side.querySelectorAll('a[href^="#"]'));
+  var map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+  var targets=Object.keys(map).map(function(id){return document.getElementById(id)}).filter(Boolean);
+  function spy(){
+    var y=window.scrollY+120,current=null;
+    targets.forEach(function(t){if(t.getBoundingClientRect().top+window.scrollY<=y)current=t});
+    links.forEach(function(a){a.classList.remove('active')});
+    if(current&&map[current.id])map[current.id].classList.add('active');
+    document.getElementById('totop').classList.toggle('show',window.scrollY>700);
+  }
+  var tick=false;
+  window.addEventListener('scroll',function(){
+    if(!tick){tick=true;requestAnimationFrame(function(){spy();tick=false})}
+  },{passive:true});
+  spy();
+
+  /* checklist reset */
+  document.getElementById('resetChecks').addEventListener('click',function(){
+    document.querySelectorAll('.check input').forEach(function(c){c.checked=false});
+  });
+})();
+</script>
+</body>
+</html>
